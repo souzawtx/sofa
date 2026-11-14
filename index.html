@@ -378,6 +378,397 @@
         </div>
     </section>
 
+    <!-- REALISTIC BEFORE & AFTER INTERACTIVE SECTION -->
+    <section id="antes-depois" class="py-16 lg:py-24 bg-white border-b border-slate-200/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-100 text-brand-700 mb-3">
+                    <i class="fa-solid fa-sliders"></i> Transformação Realista Sem Filtros
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight">
+                    Arraste e Veja o Antes (Sujo) e Depois (Higienizado)
+                </h2>
+                <p class="text-slate-600 mt-2 text-base">
+                    Escolha abaixo entre <strong>Banco de Carro</strong>, <strong>Sofá Residencial</strong> ou <strong>Colchão</strong> e deslize a barra para ver a remoção real de manchas de café, suor e poeira.
+                </p>
+            </div>
+
+            <!-- Category Selector Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-3 mb-8">
+                <button type="button" id="tab-car" onclick="switchComparison('car')"
+                        class="ba-tab-btn px-5 py-3.5 rounded-2xl font-bold text-sm transition-all flex items-center gap-2.5 bg-brand-600 text-white shadow-lg shadow-brand-600/25">
+                    <i class="fa-solid fa-chair"></i>
+                    <span>Banco de Carro (Tecido)</span>
+                </button>
+                <button type="button" id="tab-sofa" onclick="switchComparison('sofa')"
+                        class="ba-tab-btn px-5 py-3.5 rounded-2xl font-bold text-sm transition-all flex items-center gap-2.5 bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+                    <i class="fa-solid fa-couch"></i>
+                    <span>Sofá Retrátil / Sala</span>
+                </button>
+                <button type="button" id="tab-mattress" onclick="switchComparison('mattress')"
+                        class="ba-tab-btn px-5 py-3.5 rounded-2xl font-bold text-sm transition-all flex items-center gap-2.5 bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+                    <i class="fa-solid fa-bed"></i>
+                    <span>Colchão Casal / Queen</span>
+                </button>
+            </div>
+
+            <!-- Interactive Before/After Slider Wrapper -->
+            <div class="bg-slate-900 p-2 sm:p-3 rounded-3xl shadow-2xl border border-slate-200">
+                <div id="ba-slider" class="ba-slider-wrapper rounded-2xl aspect-[16/10] sm:aspect-[16/9] w-full cursor-ew-resize relative">
+                    
+                    <!-- AFTER LAYER (100% Clean, No Filters) -->
+                    <canvas id="canvas-after" width="960" height="540" class="w-full h-full block object-cover"></canvas>
+                    <div class="absolute top-4 right-4 z-20 pointer-events-none">
+                        <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-extrabold uppercase tracking-wider bg-emerald-500 text-white shadow-lg">
+                            <i class="fa-solid fa-sparkles"></i> Depois: Limpo e Renovado
+                        </span>
+                    </div>
+
+                    <!-- BEFORE LAYER (Stained & Dirty) -->
+                    <div id="ba-before-layer" class="ba-before-layer">
+                        <div id="ba-before-inner" class="h-full relative">
+                            <canvas id="canvas-before" width="960" height="540" class="w-full h-full block object-cover"></canvas>
+                        </div>
+                        <div class="absolute top-4 left-4 z-20 pointer-events-none">
+                            <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-extrabold uppercase tracking-wider bg-amber-600 text-white shadow-lg">
+                                <i class="fa-solid fa-triangle-exclamation"></i> Antes: Com Manchas e Ácaros
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- DRAG HANDLE -->
+                    <div id="ba-handle" class="ba-handle">
+                        <div class="ba-handle-btn">
+                            <i class="fa-solid fa-arrows-left-right text-lg"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Info Bar Below Slider -->
+                <div class="bg-white text-slate-800 rounded-2xl p-4 sm:p-5 mt-2.5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                    <div class="space-y-1">
+                        <div class="flex items-center gap-2 text-brand-700 font-display font-bold text-base sm:text-lg">
+                            <i id="ba-desc-icon" class="fa-solid fa-chair"></i>
+                            <h3 id="ba-desc-title">Higienização de Banco de Carro (Tecido Automotivo)</h3>
+                        </div>
+                        <p id="ba-desc-text" class="text-xs sm:text-sm text-slate-600">
+                            Extração profunda das manchas de líquidos no assento, marcas de suor no encosto e poeira acumulada nos gomos.
+                        </p>
+                        <div id="ba-stain-tags" class="pt-2 flex flex-wrap items-center gap-2">
+                            <span class="text-xs font-bold text-slate-500 uppercase mr-1">Sujeiras removidas neste exemplo:</span>
+                            <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-lg bg-amber-50 text-amber-900 border border-amber-200">
+                                <span class="w-2 h-2 rounded-full bg-amber-700"></span> Mancha de Café / Refrigerante no Assento
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-lg bg-stone-100 text-stone-800 border border-stone-200">
+                                <span class="w-2 h-2 rounded-full bg-stone-700"></span> Suor e Gordura Corporal no Encosto
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-lg bg-orange-50 text-orange-900 border border-orange-200">
+                                <span class="w-2 h-2 rounded-full bg-orange-700"></span> Terra e Poeira nas Costuras
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2 shrink-0 w-full md:w-auto">
+                        <button type="button" onclick="animateSliderTo(88)" class="flex-1 md:flex-initial text-xs font-bold px-3.5 py-2.5 rounded-xl bg-amber-100 text-amber-900 hover:bg-amber-200 transition">
+                            Ver Sujo
+                        </button>
+                        <button type="button" onclick="animateSliderTo(12)" class="flex-1 md:flex-initial text-xs font-bold px-3.5 py-2.5 rounded-xl bg-emerald-100 text-emerald-900 hover:bg-emerald-200 transition">
+                            Ver Limpo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="servicos" class="py-16 lg:py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-100 text-brand-700 mb-3">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Especialidades R.Almeida
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight">
+                    Soluções Completas em Higienização de Estofados
+                </h2>
+                <p class="text-slate-600 mt-2 text-base">
+                    Equipamentos extratora profissionais e produtos bactericidas que limpam até 5 cm abaixo da superfície do tecido.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-sm hover:shadow-xl transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-2xl mb-5">
+                            <i class="fa-solid fa-couch"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-slate-900">Sofás e Poltronas</h3>
+                        <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                            Limpeza profunda para sofás retráteis, reclináveis, de canto, suede, linho e veludo. Elimina manchas, odores de pets, poeira e ácaros.
+                        </p>
+                    </div>
+                    <button type="button" onclick="quickSelectService('sofa_retratil')"
+                            class="mt-6 w-full py-3 px-4 rounded-xl bg-brand-50 hover:bg-brand-600 text-brand-700 hover:text-white font-bold text-sm transition flex items-center justify-center gap-2">
+                        <span>Simular Orçamento de Sofá</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-sm hover:shadow-xl transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl mb-5">
+                            <i class="fa-solid fa-car-side"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-slate-900">Bancos Automotivos</h3>
+                        <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                            Higienização detalhada de bancos de carro em tecido, encostos de cabeça, teto e carpete. Seu veículo com cheiro e aspecto de zero km.
+                        </p>
+                    </div>
+                    <button type="button" onclick="quickSelectService('bancos_carro')"
+                            class="mt-6 w-full py-3 px-4 rounded-xl bg-emerald-50 hover:bg-emerald-600 text-emerald-700 hover:text-white font-bold text-sm transition flex items-center justify-center gap-2">
+                        <span>Simular Bancos de Carro</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-sm hover:shadow-xl transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-2xl mb-5">
+                            <i class="fa-solid fa-bed"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-slate-900">Colchões e Cadeiras</h3>
+                        <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                            Sanitização antiácaros para colchões solteiro, casal, queen e king, além de cadeiras de jantar acolchoadas. Ideal contra rinite e alergias.
+                        </p>
+                    </div>
+                    <button type="button" onclick="quickSelectService('colchao_casal')"
+                            class="mt-6 w-full py-3 px-4 rounded-xl bg-purple-50 hover:bg-purple-600 text-purple-700 hover:text-white font-bold text-sm transition flex items-center justify-center gap-2">
+                        <span>Simular Colchão / Cadeiras</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHATSAPP QUOTE SIMULATOR SECTION -->
+    <section id="simulador" class="py-16 lg:py-24 bg-white border-t border-slate-200/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 mb-3">
+                    <i class="fa-brands fa-whatsapp"></i> Orçamento Rápido em 30 Segundos
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight">
+                    Monte seu Pedido e Receba o Valor no WhatsApp
+                </h2>
+                <p class="text-slate-600 mt-2 text-base">
+                    Selecione os estofados abaixo para gerar a mensagem pronta diretamente para o WhatsApp <strong>(67) 99813-8086</strong>.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Left Column: Interactive Options -->
+                <div class="lg:col-span-7 bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200/90 space-y-6">
+                    <!-- Step 1: Items -->
+                    <div>
+                        <label class="block font-display font-bold text-slate-900 text-base mb-3">
+                            1. O que você deseja higienizar? <span class="text-xs font-normal text-slate-500">(Pode marcar mais de um)</span>
+                        </label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <button type="button" id="item-sofa_retratil" onclick="toggleSimItem('sofa_retratil')"
+                                    class="sim-item-btn flex items-center justify-between p-3.5 rounded-2xl border-2 border-brand-500 bg-brand-50/60 text-left transition">
+                                <span class="font-semibold text-sm text-slate-800">Sofá Retrátil / Reclinável</span>
+                                <span class="w-6 h-6 rounded-full bg-brand-600 border-2 border-brand-600 flex items-center justify-center check-circle">
+                                    <i class="fa-solid fa-check text-white text-xs"></i>
+                                </span>
+                            </button>
+                            <button type="button" id="item-sofa_2_3" onclick="toggleSimItem('sofa_2_3')"
+                                    class="sim-item-btn flex items-center justify-between p-3.5 rounded-2xl border-2 border-slate-200 hover:border-brand-400 text-left transition">
+                                <span class="font-semibold text-sm text-slate-800">Sofá 2 ou 3 Lugares</span>
+                                <span class="w-6 h-6 rounded-full border-2 border-slate-300 flex items-center justify-center check-circle">
+                                    <i class="fa-solid fa-check text-white text-xs hidden"></i>
+                                </span>
+                            </button>
+                            <button type="button" id="item-bancos_carro" onclick="toggleSimItem('bancos_carro')"
+                                    class="sim-item-btn flex items-center justify-between p-3.5 rounded-2xl border-2 border-slate-200 hover:border-brand-400 text-left transition">
+                                <span class="font-semibold text-sm text-slate-800">Bancos Automotivos (5 lug.)</span>
+                                <span class="w-6 h-6 rounded-full border-2 border-slate-300 flex items-center justify-center check-circle">
+                                    <i class="fa-solid fa-check text-white text-xs hidden"></i>
+                                </span>
+                            </button>
+                            <button type="button" id="item-interior_completo_carro" onclick="toggleSimItem('interior_completo_carro')"
+                                    class="sim-item-btn flex items-center justify-between p-3.5 rounded-2xl border-2 border-slate-200 hover:border-brand-400 text-left transition">
+                                <span class="font-semibold text-sm text-slate-800">Interior Completo de Carro</span>
+                                <span class="w-6 h-6 rounded-full border-2 border-slate-300 flex items-center justify-center check-circle">
+                                    <i class="fa-solid fa-check text-white text-xs hidden"></i>
+                                </span>
+                            </button>
+                            <button type="button" id="item-colchao_casal" onclick="toggleSimItem('colchao_casal')"
+                                    class="sim-item-btn flex items-center justify-between p-3.5 rounded-2xl border-2 border-slate-200 hover:border-brand-400 text-left transition">
+                                <span class="font-semibold text-sm text-slate-800">Colchão (Solteiro / Casal)</span>
+                                <span class="w-6 h-6 rounded-full border-2 border-slate-300 flex items-center justify-center check-circle">
+                                    <i class="fa-solid fa-check text-white text-xs hidden"></i>
+                                </span>
+                            </button>
+                            <button type="button" id="item-poltronas_cadeiras" onclick="toggleSimItem('poltronas_cadeiras')"
+                                    class="sim-item-btn flex items-center justify-between p-3.5 rounded-2xl border-2 border-slate-200 hover:border-brand-400 text-left transition">
+                                <span class="font-semibold text-sm text-slate-800">Poltronas / Cadeiras</span>
+                                <span class="w-6 h-6 rounded-full border-2 border-slate-300 flex items-center justify-center check-circle">
+                                    <i class="fa-solid fa-check text-white text-xs hidden"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Objective -->
+                    <div>
+                        <label class="block font-display font-bold text-slate-900 text-base mb-3">
+                            2. Qual a necessidade principal?
+                        </label>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                            <button type="button" id="cond-1" onclick="setSimCondition('Limpeza Profunda + Antiácaros')"
+                                    class="sim-cond-btn py-3 px-3.5 rounded-xl border-2 border-brand-500 bg-brand-50 text-brand-900 font-bold text-xs sm:text-sm transition">
+                                Limpeza + Antiácaros
+                            </button>
+                            <button type="button" id="cond-2" onclick="setSimCondition('Remoção de Manchas Difíceis')"
+                                    class="sim-cond-btn py-3 px-3.5 rounded-xl border-2 border-slate-200 text-slate-700 hover:border-brand-300 font-semibold text-xs sm:text-sm transition">
+                                Manchas Difíceis
+                            </button>
+                            <button type="button" id="cond-3" onclick="setSimCondition('Limpeza + Neutralizar Odores (Pet/Suor)')"
+                                    class="sim-cond-btn py-3 px-3.5 rounded-xl border-2 border-slate-200 text-slate-700 hover:border-brand-300 font-semibold text-xs sm:text-sm transition">
+                                Odores (Pet / Suor)
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Mode -->
+                    <div>
+                        <label class="block font-display font-bold text-slate-900 text-base mb-3">
+                            3. Como prefere o atendimento?
+                        </label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <button type="button" id="mode-domicilio" onclick="setSimMode('Atendimento a Domicílio')"
+                                    class="sim-mode-btn p-3.5 rounded-xl border-2 border-brand-500 bg-brand-50 text-brand-900 font-bold text-sm flex items-center gap-2.5 transition">
+                                <i class="fa-solid fa-house-chimney-user text-brand-600"></i>
+                                <span>Atendimento a Domicílio</span>
+                            </button>
+                            <button type="button" id="mode-local" onclick="setSimMode('Levar até a R.Almeida (Vicentina)')"
+                                    class="sim-mode-btn p-3.5 rounded-xl border-2 border-slate-200 text-slate-700 hover:border-brand-300 font-semibold text-sm flex items-center gap-2.5 transition">
+                                <i class="fa-solid fa-location-dot text-brand-600"></i>
+                                <span>Levar no Local (Juvino L. Bueno, 2284)</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Name & Location -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="cust-name" class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Seu Nome (Opcional)</label>
+                            <input type="text" id="cust-name" oninput="updateWhatsAppPreview()" placeholder="Ex: Maria Silva"
+                                   class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-500 focus:outline-none text-sm">
+                        </div>
+                        <div>
+                            <label for="cust-city" class="block text-xs font-bold uppercase text-slate-500 mb-1.5">Bairro / Cidade</label>
+                            <input type="text" id="cust-city" oninput="updateWhatsAppPreview()" value="Vicentina - MS"
+                                   class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-500 focus:outline-none text-sm">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Live WhatsApp Preview & CTA -->
+                <div class="lg:col-span-5 bg-slate-900 text-white rounded-3xl p-6 sm:p-7 border border-slate-800 shadow-xl space-y-5">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-whatsapp/20 text-whatsapp flex items-center justify-center text-xl">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-display font-bold text-base">Prévia da Mensagem</h3>
+                                <p class="text-xs text-slate-400">WhatsApp Oficial: (67) 99813-8086</p>
+                            </div>
+                        </div>
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300">Pronto</span>
+                    </div>
+
+                    <pre id="whatsapp-preview-box" class="bg-slate-950/90 text-slate-200 p-4 rounded-2xl text-xs sm:text-sm font-sans whitespace-pre-wrap leading-relaxed border border-slate-800"></pre>
+
+                    <div class="space-y-2.5 pt-1">
+                        <a id="whatsapp-send-btn"
+                           href="https://wa.me/5567998138086"
+                           target="_blank" rel="noopener noreferrer"
+                           class="w-full flex items-center justify-center gap-2.5 bg-whatsapp hover:bg-whatsapp-dark text-white font-bold text-base py-4 px-6 rounded-2xl shadow-lg shadow-emerald-500/25 transition">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Enviar Pedido no WhatsApp</span>
+                        </a>
+                        <button type="button" onclick="copyQuoteMessage()"
+                                class="w-full flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs py-3 px-4 rounded-xl border border-slate-700 transition">
+                            <i class="fa-regular fa-copy"></i>
+                            <span>Copiar Texto do Orçamento</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALUES, INCLUSIVITY & ACCESSIBILITY SECTION -->
+    <section id="diferenciais" class="py-16 lg:py-20 bg-slate-50 border-t border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-purple-100 text-purple-800 mb-3">
+                    <i class="fa-solid fa-heart"></i> Compromisso, Respeito e Qualidade
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight">
+                    Por Que Escolher a R.Almeida em Vicentina?
+                </h2>
+                <p class="text-slate-600 mt-2 text-base">
+                    Reconhecida com nota máxima 5,0 estrelas no Google Maps pelo capricho em cada detalhe e pelo atendimento acolhedor.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Badge 1: Women-Owned -->
+                <div class="bg-white rounded-3xl p-6 border border-purple-200/80 shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <span class="text-xs font-bold uppercase text-purple-600">Selo Oficial Google</span>
+                    <h3 class="font-display font-bold text-lg text-slate-900 mt-1">Empresa de Empreendedoras</h3>
+                    <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                        Liderada por mulheres empreendedoras de Vicentina, com foco em pontualidade, confiança e rigor técnico no cuidado com os móveis da sua família.
+                    </p>
+                </div>
+
+                <!-- Badge 2: LGBTQ+ Friendly -->
+                <div class="bg-white rounded-3xl p-6 border border-pink-200/80 shadow-sm rainbow-badge">
+                    <div class="w-12 h-12 rounded-2xl bg-white text-pink-600 flex items-center justify-center text-xl mb-4 shadow-sm">
+                        <i class="fa-solid fa-rainbow"></i>
+                    </div>
+                    <span class="text-xs font-bold uppercase text-pink-700">Respeito & Diversidade</span>
+                    <h3 class="font-display font-bold text-lg text-slate-900 mt-1">Acolhe a Comunidade LGBTQ+</h3>
+                    <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                        Empresa que acolhe a comunidade LGBTQ+ e oferece espaço seguro e atendimento respeitoso para pessoas transgênero e todas as famílias.
+                    </p>
+                </div>
+
+                <!-- Badge 3: Wheelchair Accessible -->
+                <div class="bg-white rounded-3xl p-6 border border-sky-200/80 shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-wheelchair"></i>
+                    </div>
+                    <span class="text-xs font-bold uppercase text-sky-700">Acessibilidade</span>
+                    <h3 class="font-display font-bold text-lg text-slate-900 mt-1">Entrada Acessível & Domicílio</h3>
+                    <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                        Entrada com acessibilidade para pessoas em cadeira de rodas no nosso endereço em Vicentina, além de comodidade total com atendimento em domicílio.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- LOCATION & CONTACT SECTION (FIXED & UPGRADED WITH DUAL MAP TABS) -->
     <section id="localizacao" class="py-16 lg:py-24 bg-slate-900 text-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -1418,6 +1809,7 @@
         }
 
         function setSliderPosition(percentage) {
+            if (!beforeLayer || !handle) return;
             currentPercent = Math.max(4, Math.min(96, percentage));
             beforeLayer.style.width = currentPercent + '%';
             handle.style.left = currentPercent + '%';
@@ -1440,35 +1832,38 @@
         }
 
         function handleMove(clientX) {
+            if (!slider) return;
             const rect = slider.getBoundingClientRect();
             const offsetX = clientX - rect.left;
             const percentage = (offsetX / rect.width) * 100;
             setSliderPosition(percentage);
         }
 
-        slider.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            handleMove(e.clientX);
-        });
-        window.addEventListener('mousemove', (e) => {
-            if (!isDragging) return;
-            handleMove(e.clientX);
-        });
-        window.addEventListener('mouseup', () => {
-            isDragging = false;
-        });
+        if (slider) {
+            slider.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                handleMove(e.clientX);
+            });
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                handleMove(e.clientX);
+            });
+            window.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
 
-        slider.addEventListener('touchstart', (e) => {
-            isDragging = true;
-            handleMove(e.touches[0].clientX);
-        }, { passive: true });
-        slider.addEventListener('touchmove', (e) => {
-            if (!isDragging) return;
-            handleMove(e.touches[0].clientX);
-        }, { passive: true });
-        slider.addEventListener('touchend', () => {
-            isDragging = false;
-        });
+            slider.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                handleMove(e.touches[0].clientX);
+            }, { passive: true });
+            slider.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                handleMove(e.touches[0].clientX);
+            }, { passive: true });
+            slider.addEventListener('touchend', () => {
+                isDragging = false;
+            });
+        }
 
         window.addEventListener('resize', syncBeforeImageWidth);
 
