@@ -1,0 +1,1802 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R.Almeida Higienização de Sofás e Estofados | Vicentina - MS</title>
+    <meta name="description" content="Higienização profissional de sofás, bancos automotivos, colchões e poltronas em Vicentina - MS e região. Avaliação 5,0 estrelas no Google. Peça seu orçamento pelo WhatsApp (67) 99813-8086.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            950: '#082f49',
+                        },
+                        whatsapp: {
+                            DEFAULT: '#25D366',
+                            dark: '#128C7E'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom styles for Before/After Slider and Animations */
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, .font-display {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        
+        /* Subtle water/bubble background pattern */
+        .bg-hygiene-grid {
+            background-color: #082f49;
+            background-image: 
+                radial-gradient(at 15% 20%, rgba(14, 165, 233, 0.28) 0px, transparent 50%),
+                radial-gradient(at 85% 80%, rgba(56, 189, 248, 0.2) 0px, transparent 50%),
+                radial-gradient(at 50% 50%, rgba(16, 185, 129, 0.1) 0px, transparent 60%);
+        }
+
+        /* Before & After Slider Container */
+        .ba-slider-wrapper {
+            position: relative;
+            user-select: none;
+            overflow: hidden;
+            touch-action: pan-y;
+            background: #0f172a;
+        }
+        .ba-before-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 50%;
+            overflow: hidden;
+            z-index: 10;
+        }
+        .ba-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: linear-gradient(180deg, #38bdf8 0%, #ffffff 50%, #10b981 100%);
+            z-index: 25;
+            transform: translateX(-50%);
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.8), 0 0 8px rgba(0, 0, 0, 0.6);
+            pointer-events: none;
+        }
+        /* Extraction suction glow along the divider line */
+        .ba-handle::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -18px;
+            width: 36px;
+            background: linear-gradient(90deg, rgba(14, 165, 233, 0) 0%, rgba(56, 189, 248, 0.28) 50%, rgba(16, 185, 129, 0.18) 100%);
+            pointer-events: none;
+        }
+        .ba-handle-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 52px;
+            height: 52px;
+            border-radius: 9999px;
+            background: linear-gradient(135deg, #0284c7, #0d9488);
+            border: 3px solid #ffffff;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(2, 132, 199, 0.55);
+            transition: transform 0.15s ease;
+        }
+        .ba-slider-wrapper:hover .ba-handle-btn {
+            transform: translate(-50%, -50%) scale(1.08);
+        }
+
+        /* Floating pulse animation */
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .whatsapp-pulse {
+            animation: pulse-ring 2.2s infinite;
+        }
+
+        /* Rainbow subtle gradient border for LGBTQ+ badge */
+        .rainbow-badge {
+            background: linear-gradient(90deg, rgba(239,68,68,0.12), rgba(245,158,11,0.12), rgba(16,185,129,0.12), rgba(59,130,246,0.12), rgba(168,85,247,0.12));
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-brand-950 text-sky-100 text-xs sm:text-sm py-2.5 px-4 border-b border-brand-800/60">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-2 sm:gap-4 flex-wrap">
+                <span class="inline-flex items-center gap-1.5 font-medium text-amber-400">
+                    <i class="fa-solid fa-star"></i>
+                    <span>5,0 (1) no Google Maps</span>
+                </span>
+                <span class="hidden md:inline text-brand-700">|</span>
+                <span class="inline-flex items-center gap-1.5 text-slate-200">
+                    <i class="fa-solid fa-location-dot text-brand-400"></i>
+                    <span>Juvino Leme Bueno, 2284 - Vicentina, MS, 79710-000</span>
+                </span>
+            </div>
+            <div class="flex items-center gap-3 ml-auto">
+                <a href="#localizacao" id="live-status-badge" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 hover:opacity-90 transition">
+                    <span id="live-status-dot" class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    <span id="live-status-text">Seg. a Sáb.: 07:00–17:00</span>
+                </a>
+                <a href="tel:+5567998138086" class="hidden sm:inline-flex items-center gap-1.5 hover:text-white font-semibold transition">
+                    <i class="fa-solid fa-phone-volume text-brand-400"></i>
+                    (67) 99813-8086
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white shadow-md shadow-brand-500/25 group-hover:scale-105 transition">
+                        <i class="fa-solid fa-couch text-lg"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="font-display font-extrabold text-xl tracking-tight text-slate-900">R.Almeida</span>
+                            <span class="text-xs font-bold uppercase px-2 py-0.5 rounded-md bg-brand-100 text-brand-700">5.0 ★</span>
+                        </div>
+                        <p class="text-xs font-medium text-slate-500 -mt-0.5">Higienização de Sofás & Estofados</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-600">
+                    <a href="#servicos" class="hover:text-brand-600 transition">Serviços</a>
+                    <a href="#antes-depois" class="hover:text-brand-600 transition">Antes e Depois</a>
+                    <a href="#simulador" class="hover:text-brand-600 transition flex items-center gap-1.5 text-brand-600">
+                        <i class="fa-solid fa-calculator text-xs"></i>
+                        Simular Orçamento
+                    </a>
+                    <a href="#diferenciais" class="hover:text-brand-600 transition">Sobre a Empresa</a>
+                    <a href="#localizacao" class="hover:text-brand-600 transition">Localização</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="https://wa.me/5567998138086?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20R.Almeida%20Higieniza%C3%A7%C3%A3o%20de%20Sof%C3%A1s%20e%20gostaria%20de%20um%20or%C3%A7amento."
+                       target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2.5 bg-whatsapp hover:bg-whatsapp-dark text-white font-bold text-sm px-5 py-3 rounded-xl shadow-lg shadow-emerald-500/25 hover:-translate-y-0.5 transition-all">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Orçamento Rápido</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Trigger -->
+                <button id="mobile-menu-btn" aria-label="Abrir Menu" class="lg:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none">
+                    <i id="mobile-menu-icon" class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+            <a href="#servicos" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-semibold text-slate-700 hover:bg-brand-50 hover:text-brand-600">
+                <i class="fa-solid fa-wand-magic-sparkles w-6 text-brand-500"></i> Nossos Serviços
+            </a>
+            <a href="#antes-depois" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-semibold text-slate-700 hover:bg-brand-50 hover:text-brand-600">
+                <i class="fa-solid fa-sliders w-6 text-brand-500"></i> Transformação Antes e Depois
+            </a>
+            <a href="#simulador" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-semibold text-brand-700 bg-brand-50">
+                <i class="fa-solid fa-calculator w-6 text-brand-600"></i> Simulador de Orçamento
+            </a>
+            <a href="#diferenciais" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-semibold text-slate-700 hover:bg-brand-50 hover:text-brand-600">
+                <i class="fa-solid fa-heart w-6 text-brand-500"></i> Valores & Acolhimento
+            </a>
+            <a href="#localizacao" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-semibold text-slate-700 hover:bg-brand-50 hover:text-brand-600">
+                <i class="fa-solid fa-map-location-dot w-6 text-brand-500"></i> Endereço em Vicentina - MS
+            </a>
+            <div class="pt-2">
+                <a href="https://wa.me/5567998138086?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20higieniza%C3%A7%C3%A3o."
+                   target="_blank" rel="noopener noreferrer"
+                   class="w-full flex items-center justify-center gap-2 bg-whatsapp text-white font-bold py-3.5 px-5 rounded-xl shadow-md">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    Chamar no WhatsApp (67) 99813-8086
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-hygiene-grid text-white pt-10 pb-16 lg:py-24 overflow-hidden">
+        <!-- Decorative glowing orbs -->
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-teal-400/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                
+                <!-- Left Column: Persuasive Copy -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <!-- Trust Badges Row -->
+                    <div class="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2">
+                        <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-400/15 text-amber-300 border border-amber-400/30">
+                            <i class="fa-solid fa-star text-amber-400"></i> Nota 5,0 no Google
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-200 border border-purple-400/30">
+                            <i class="fa-solid fa-heart text-purple-400"></i> Empresa de Empreendedoras
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brand-500/20 text-brand-200 border border-brand-400/30">
+                            <i class="fa-solid fa-location-dot text-brand-400"></i> Vicentina - MS e Região
+                        </span>
+                    </div>
+
+                    <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl leading-tight tracking-tight">
+                        Seu Sofá e o Interior do seu Carro <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-cyan-200 to-emerald-300">Novos de Novo!</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-sky-100/90 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Higienização profunda com extração a vácuo de alta potência. Removemos <strong>manchas difíceis, poeira impregnada, suor, odores, fungos e 99,9% dos ácaros</strong> de sofás, colchões, poltronas e bancos automotivos.
+                    </p>
+
+                    <!-- Key Benefit Pills -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1 text-left max-w-2xl mx-auto lg:mx-0">
+                        <div class="flex items-center gap-2.5 bg-white/10 backdrop-blur-sm px-3.5 py-2.5 rounded-xl border border-white/10">
+                            <i class="fa-solid fa-shield-virus text-emerald-400 text-lg"></i>
+                            <span class="text-xs sm:text-sm font-medium">Saúde e Proteção Antiácaros</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 bg-white/10 backdrop-blur-sm px-3.5 py-2.5 rounded-xl border border-white/10">
+                            <i class="fa-solid fa-car-side text-sky-300 text-lg"></i>
+                            <span class="text-xs sm:text-sm font-medium">Sofás e Bancos Automotivos</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 bg-white/10 backdrop-blur-sm px-3.5 py-2.5 rounded-xl border border-white/10">
+                            <i class="fa-solid fa-house-chimney-user text-amber-300 text-lg"></i>
+                            <span class="text-xs sm:text-sm font-medium">No Local ou a Domicílio</span>
+                        </div>
+                    </div>
+
+                    <!-- Primary CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-3">
+                        <a href="#simulador"
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-whatsapp hover:bg-whatsapp-dark text-white font-bold text-base px-7 py-4 rounded-2xl shadow-xl shadow-emerald-500/25 hover:-translate-y-0.5 transition-all">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Simular Orçamento no WhatsApp</span>
+                        </a>
+                        <a href="#antes-depois"
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 text-white font-semibold text-base px-6 py-4 rounded-2xl border border-white/20 transition-all">
+                            <i class="fa-solid fa-eye text-sky-300"></i>
+                            <span>Ver Antes e Depois</span>
+                        </a>
+                    </div>
+
+                    <!-- Social Proof Micro-bar -->
+                    <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-sky-200/80">
+                        <span class="flex items-center gap-1.5">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i> Produtos biodegradáveis e seguros para crianças e pets
+                        </span>
+                        <span class="flex items-center gap-1.5">
+                            <i class="fa-solid fa-wheelchair text-sky-300"></i> Espaço físico com acessibilidade
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Right Column: Visual Feature Card (Sofas + Car Seats Showcase) -->
+                <div class="lg:col-span-5">
+                    <div class="relative bg-white/10 backdrop-blur-md p-4 sm:p-5 rounded-3xl border border-white/20 shadow-2xl">
+                        <!-- Dual Image Grid representing the actual Google Maps portfolio (Sofas & Car Seats) -->
+                        <div class="grid grid-cols-2 gap-3">
+                            <!-- Card 1: Sofa -->
+                            <div class="relative rounded-2xl overflow-hidden group aspect-[4/5] bg-slate-900">
+                                <canvas id="hero-sofa-canvas" width="360" height="450" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></canvas>
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent pointer-events-none"></div>
+                                <div class="absolute bottom-3 left-3 right-3 pointer-events-none">
+                                    <span class="inline-block px-2.5 py-0.5 rounded-md bg-brand-500 text-white text-[11px] font-bold uppercase mb-1">Residencial</span>
+                                    <p class="font-display font-bold text-white text-sm leading-tight">Sofás, Poltronas e Colchões</p>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: Car Seats (Rendered realistic automotive seat interior matching Google Maps photo) -->
+                            <div class="relative rounded-2xl overflow-hidden group aspect-[4/5] bg-slate-900">
+                                <canvas id="hero-seat-canvas" width="360" height="450" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></canvas>
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent pointer-events-none"></div>
+                                <div class="absolute bottom-3 left-3 right-3 pointer-events-none">
+                                    <span class="inline-block px-2.5 py-0.5 rounded-md bg-emerald-500 text-white text-[11px] font-bold uppercase mb-1">Estofado Automotivo</span>
+                                    <p class="font-display font-bold text-white text-sm leading-tight">Bancos de Carro e Estofamento</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Floating Info Box inside Hero Card -->
+                        <div class="mt-4 bg-slate-900/90 rounded-2xl p-4 border border-white/10 flex items-center justify-between gap-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-11 h-11 rounded-xl bg-amber-400/20 border border-amber-400/40 flex items-center justify-center text-amber-300 font-display font-extrabold text-lg shrink-0">
+                                    5,0
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-1 text-amber-400 text-xs">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <span class="text-white font-semibold ml-1">R.Almeida</span>
+                                    </div>
+                                    <p class="text-xs text-slate-300 mt-0.5">Seg. a Sáb. 07:00–17:00 • Vicentina, MS</p>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/5567998138086" target="_blank" rel="noopener noreferrer"
+                               class="shrink-0 bg-brand-500 hover:bg-brand-400 text-white text-xs font-bold px-3.5 py-2.5 rounded-xl transition">
+                                Agendar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION & CONTACT SECTION (FIXED & UPGRADED WITH DUAL MAP TABS) -->
+    <section id="localizacao" class="py-16 lg:py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-500/20 text-brand-300 border border-brand-400/30 mb-3">
+                    <i class="fa-solid fa-map-location-dot"></i> Localização Exata e Horários Oficiais
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl tracking-tight">
+                    Como Chegar na R.Almeida em Vicentina - MS
+                </h2>
+                <p class="text-slate-300 mt-2 text-base">
+                    Estamos na <strong>Rua Juvino Leme Bueno, 2284</strong> (próximo à UBS da Família e Chácara Kirei) ou vamos até a sua casa!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Left Column: Official Address, Hours & Direct Actions -->
+                <div class="lg:col-span-5 bg-slate-800/95 rounded-3xl p-6 sm:p-7 border border-slate-700 shadow-2xl flex flex-col justify-between space-y-6">
+                    <div class="space-y-5">
+                        <!-- Official Address Header -->
+                        <div class="flex items-start gap-3.5">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-500/20 border border-brand-400/30 text-brand-300 flex items-center justify-center text-xl shrink-0 mt-0.5">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span class="text-xs font-bold uppercase tracking-wider text-brand-400">Endereço Oficial</span>
+                                    <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-slate-700 text-slate-300">CEP 79710-000</span>
+                                </div>
+                                <h3 class="font-display font-bold text-lg sm:text-xl text-white mt-0.5">R.Almeida Higienização de Sofás</h3>
+                                <p class="text-slate-200 text-sm mt-1 font-medium">
+                                    Rua Juvino Leme Bueno, 2284 - Vicentina, MS
+                                </p>
+                                <div class="mt-2 flex flex-wrap items-center gap-2 text-xs text-slate-400">
+                                    <span class="inline-flex items-center gap-1 bg-slate-900/90 px-2.5 py-1 rounded-lg border border-slate-700">
+                                        <i class="fa-solid fa-plus text-brand-400"></i> Plus Code: HHQG+P7 Vicentina, MS
+                                    </span>
+                                    <span class="inline-flex items-center gap-1 bg-slate-900/90 px-2.5 py-1 rounded-lg border border-slate-700 font-mono text-[11px]">
+                                        -22.410911, -54.424261
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phone / WhatsApp Card -->
+                        <div class="flex items-center justify-between gap-3 p-3.5 rounded-2xl bg-slate-900/90 border border-slate-700/90">
+                            <div class="flex items-center gap-3.5">
+                                <div class="w-11 h-11 rounded-xl bg-whatsapp/20 text-whatsapp flex items-center justify-center text-2xl shrink-0">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[11px] text-slate-400 uppercase font-bold">Atendimento & Agendamento</p>
+                                    <a href="https://wa.me/5567998138086?text=Ol%C3%A1%21%20Vi%20a%20localiza%C3%A7%C3%A3o%20no%20site%20da%20R.Almeida%20e%20gostaria%20de%20informac%C3%B5es."
+                                       target="_blank" rel="noopener noreferrer"
+                                       class="font-display font-extrabold text-base sm:text-lg text-white hover:text-emerald-400 transition">
+                                        (67) 99813-8086
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="tel:+5567998138086"
+                               class="text-xs font-bold bg-slate-800 hover:bg-slate-700 text-slate-200 px-3 py-2 rounded-xl border border-slate-600 transition">
+                                <i class="fa-solid fa-phone mr-1"></i> Ligar
+                            </a>
+                        </div>
+
+                        <!-- Complete Day-by-Day Opening Hours from Google Maps -->
+                        <div class="bg-slate-900/75 rounded-2xl p-4 border border-slate-700/80">
+                            <div class="flex items-center justify-between mb-3 pb-2 border-b border-slate-700/80">
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-brand-400 flex items-center gap-1.5">
+                                    <i class="fa-regular fa-clock"></i> Horário de Funcionamento
+                                </h4>
+                                <span id="hours-card-status" class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300">
+                                    07:00–17:00
+                                </span>
+                            </div>
+
+                            <div class="space-y-1.5 text-xs sm:text-sm" id="weekly-hours-list">
+                                <div data-day="1" class="day-row flex justify-between items-center py-1 px-2 rounded-lg">
+                                    <span class="text-slate-300">segunda-feira</span>
+                                    <span class="font-semibold text-white">07:00–17:00</span>
+                                </div>
+                                <div data-day="2" class="day-row flex justify-between items-center py-1 px-2 rounded-lg">
+                                    <span class="text-slate-300">terça-feira</span>
+                                    <span class="font-semibold text-white">07:00–17:00</span>
+                                </div>
+                                <div data-day="3" class="day-row flex justify-between items-center py-1 px-2 rounded-lg">
+                                    <span class="text-slate-300">quarta-feira</span>
+                                    <span class="font-semibold text-white">07:00–17:00</span>
+                                </div>
+                                <div data-day="4" class="day-row flex justify-between items-center py-1 px-2 rounded-lg">
+                                    <span class="text-slate-300">quinta-feira</span>
+                                    <span class="font-semibold text-white">07:00–17:00</span>
+                                </div>
+                                <div data-day="5" class="day-row flex justify-between items-center py-1 px-2 rounded-lg">
+                                    <span class="text-slate-300">sexta-feira</span>
+                                    <span class="font-semibold text-white">07:00–17:00</span>
+                                </div>
+                                <div data-day="6" class="day-row flex justify-between items-center py-1 px-2 rounded-lg">
+                                    <span class="text-slate-300">sábado</span>
+                                    <span class="font-semibold text-white">07:00–17:00</span>
+                                </div>
+                                <div data-day="0" class="day-row flex justify-between items-center py-1 px-2 rounded-lg">
+                                    <span class="text-slate-400">domingo</span>
+                                    <span class="font-semibold text-rose-400">Fechado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons: Route, Copy Address & Home Service -->
+                    <div class="space-y-2.5 pt-1">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=-22.4109114,-54.4242613"
+                               target="_blank" rel="noopener noreferrer"
+                               class="flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-500 text-white font-bold text-sm py-3.5 px-4 rounded-xl shadow-lg shadow-brand-600/25 transition">
+                                <i class="fa-solid fa-diamond-turn-right"></i>
+                                <span>Traçar Rota Agora</span>
+                            </a>
+                            <button type="button" id="copy-address-btn" onclick="copyAddress()"
+                                    class="flex items-center justify-center gap-2 bg-slate-700 hover:bg-slate-600 text-white font-semibold text-sm py-3.5 px-4 rounded-xl border border-slate-600 transition">
+                                <i id="copy-address-icon" class="fa-regular fa-copy"></i>
+                                <span id="copy-address-text">Copiar Endereço</span>
+                            </button>
+                        </div>
+
+                        <a href="https://wa.me/5567998138086?text=Ol%C3%A1%2C%20R.Almeida%21%20Gostaria%20de%20pedir%20atendimento%20em%20domic%C3%ADlio%20para%20higieniza%C3%A7%C3%A3o%20de%20estofados."
+                           target="_blank" rel="noopener noreferrer"
+                           class="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm py-3.5 px-4 rounded-xl shadow-lg shadow-emerald-600/20 transition">
+                            <i class="fa-solid fa-house-chimney-user"></i>
+                            <span>Pedir Atendimento em Domicílio via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Dual-Mode Map Panel (Guaranteed 450px+ Height, Never Blank or Buggy) -->
+                <div class="lg:col-span-7 bg-slate-800 rounded-3xl overflow-hidden border border-slate-700 shadow-2xl flex flex-col">
+                    
+                    <!-- Map Mode Switcher Tabs Header -->
+                    <div class="bg-slate-900/95 px-4 py-3 border-b border-slate-700 flex flex-wrap items-center justify-between gap-2">
+                        <div class="flex items-center gap-2">
+                            <button type="button" id="map-tab-vector" onclick="switchMapTab('vector')"
+                                    class="px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-brand-600 text-white shadow">
+                                <i class="fa-solid fa-map"></i>
+                                <span>Mapa Interativo de Vicentina (Rápido)</span>
+                            </button>
+                            <button type="button" id="map-tab-iframe" onclick="switchMapTab('iframe')"
+                                    class="px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700">
+                                <i class="fa-solid fa-earth-americas text-emerald-400"></i>
+                                <span>Google Maps Ao Vivo (Satélite/Rua)</span>
+                            </button>
+                        </div>
+
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=-22.4109114,-54.4242613"
+                           target="_blank" rel="noopener noreferrer"
+                           class="text-xs font-bold text-sky-400 hover:text-sky-300 flex items-center gap-1 px-2 py-1">
+                            <span>Abrir no App Maps</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+
+                    <!-- TAB 1: Interactive Street Map of Vicentina (Default - Instant Load & Zoomable) -->
+                    <div id="map-panel-vector" class="relative w-full min-h-[460px] h-[460px] bg-[#e5e3df] overflow-hidden select-none">
+                        
+                        <!-- Interactive Zoom/Pan SVG Stage -->
+                        <div id="vector-map-stage" class="w-full h-full transition-transform duration-300 ease-out origin-center cursor-grab active:cursor-grabbing" style="transform: scale(1) translate(0px, 0px);">
+                            <svg class="w-full h-full object-cover" viewBox="0 0 900 540" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                                <!-- Google Maps Light Terrain Background -->
+                                <rect width="900" height="540" fill="#e8eaed"/>
+                                
+                                <!-- Green Rural / Chácara Areas on East & South (Matching Vicentina Maps screenshot) -->
+                                <path d="M560 0 L900 0 L900 540 L390 540 Z" fill="#d2e8d5"/>
+                                <path d="M0 430 L390 540 L0 540 Z" fill="#d8ecd9"/>
+
+                                <!-- Urban Blocks of Vicentina Residential Sector -->
+                                <g transform="rotate(-68 410 260)" opacity="0.95">
+                                    <!-- Blocks along R. Juvino Leme Bueno & R. Orlando Heloy -->
+                                    <rect x="240" y="90" width="130" height="75" rx="6" fill="#f8f9fa" stroke="#dadce0" stroke-width="2"/>
+                                    <rect x="388" y="90" width="135" height="75" rx="6" fill="#f8f9fa" stroke="#dadce0" stroke-width="2"/>
+                                    <rect x="540" y="90" width="120" height="75" rx="6" fill="#f8f9fa" stroke="#dadce0" stroke-width="2"/>
+
+                                    <rect x="240" y="185" width="130" height="82" rx="6" fill="#f8f9fa" stroke="#dadce0" stroke-width="2"/>
+                                    <rect x="388" y="185" width="135" height="82" rx="6" fill="#f8f9fa" stroke="#dadce0" stroke-width="2"/>
+                                    <rect x="540" y="185" width="120" height="82" rx="6" fill="#f8f9fa" stroke="#dadce0" stroke-width="2"/>
+
+                                    <!-- Highlighted Parcel for R.Almeida Higienização de Sofás (Nº 2284) -->
+                                    <rect x="240" y="288" width="130" height="86" rx="6" fill="#f8f9fa" stroke="#dadce0" stroke-width="2"/>
+                                    <rect x="388" y="288" width="135" height="86" rx="6" fill="#fff8e6" stroke="#f59e0b" stroke-width="2.5"/>
+                                    <!-- Building footprint inside parcel 2284 -->
+                                    <rect x="415" y="305" width="58" height="44" rx="4" fill="#fde68a" stroke="#d97706" stroke-width="1.5"/>
+                                </g>
+
+                                <!-- Street Network (Accurate layout of R. Juvino Leme Bueno, R. Orlando Heloy, R. Projetada B, MS-147) -->
+                                <!-- Highway MS-147 / BR-376 at bottom -->
+                                <path d="M-20 420 L650 560" stroke="#fbbc04" stroke-width="16"/>
+                                <path d="M-20 420 L650 560" stroke="#fde293" stroke-width="10"/>
+
+                                <!-- Secondary Streets: R. Francisco Isaías Niz, R. Orlando Heloy, R. Projetada B & D -->
+                                <path d="M350 -20 L150 460" stroke="#ffffff" stroke-width="14"/>
+                                <path d="M435 -20 L235 480" stroke="#ffffff" stroke-width="16"/>
+                                <path d="M220 95 L575 215" stroke="#ffffff" stroke-width="13"/>
+                                <path d="M165 245 L520 365" stroke="#ffffff" stroke-width="14"/>
+                                <path d="M130 345 L485 465" stroke="#ffffff" stroke-width="14"/>
+
+                                <!-- MAIN STREET: R. Juvino Leme Bueno (Highlighted) -->
+                                <path d="M535 -20 L325 500" stroke="#cbd5e1" stroke-width="28"/>
+                                <path d="M535 -20 L325 500" stroke="#ffffff" stroke-width="22"/>
+                                <!-- Animated Route Path from MS-147 up R. Juvino Leme Bueno to Nº 2284 -->
+                                <path d="M332 485 L432 238" stroke="#0284c7" stroke-width="6" stroke-dasharray="10 6" stroke-linecap="round"/>
+
+                                <!-- Street Name Labels -->
+                                <g transform="translate(468, 155) rotate(-68)">
+                                    <rect x="-85" y="-10" width="170" height="20" rx="4" fill="#ffffff" opacity="0.85"/>
+                                    <text x="0" y="4" fill="#1e293b" font-family="Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle">R. Juvino Leme Bueno</text>
+                                </g>
+                                <g transform="translate(335, 195) rotate(-68)">
+                                    <text x="0" y="0" fill="#64748b" font-family="Inter, sans-serif" font-size="10" font-weight="600" text-anchor="middle">R. Orlando Heloy</text>
+                                </g>
+                                <g transform="translate(310, 405) rotate(19)">
+                                    <text x="0" y="0" fill="#64748b" font-family="Inter, sans-serif" font-size="10" font-weight="600" text-anchor="middle">R. Projetada B</text>
+                                </g>
+                                <!-- Highway Shield MS-147 / 376 -->
+                                <g transform="translate(275, 482)">
+                                    <rect x="-28" y="-11" width="56" height="22" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+                                    <text x="0" y="4" fill="#334155" font-family="Inter, sans-serif" font-size="10" font-weight="800" text-anchor="middle">MS-147</text>
+                                </g>
+
+                                <!-- Nearby Reference Landmarks (Matching Screenshot) -->
+                                <!-- Reference 1: UBS da Família -->
+                                <g transform="translate(382, 148)">
+                                    <circle cx="0" cy="0" r="10" fill="#64748b" stroke="#ffffff" stroke-width="2"/>
+                                    <text x="14" y="4" fill="#334155" font-family="Inter, sans-serif" font-size="11" font-weight="700">UBS da Família</text>
+                                </g>
+
+                                <!-- Reference 2: Chácara Kirei -->
+                                <g transform="translate(425, 298)">
+                                    <circle cx="0" cy="0" r="10" fill="#0d9488" stroke="#ffffff" stroke-width="2"/>
+                                    <text x="14" y="4" fill="#0f766e" font-family="Inter, sans-serif" font-size="11" font-weight="700">Chácara Kirei</text>
+                                </g>
+
+                                <!-- Reference 3: Degustte Pizzaria -->
+                                <g transform="translate(278, 355)">
+                                    <circle cx="0" cy="0" r="9" fill="#f97316" stroke="#ffffff" stroke-width="2"/>
+                                    <text x="13" y="4" fill="#9a3412" font-family="Inter, sans-serif" font-size="10" font-weight="600">Degustte Pizzaria</text>
+                                </g>
+
+                                <!-- Reference 4: Armazém JM -->
+                                <g transform="translate(215, 338)">
+                                    <circle cx="0" cy="0" r="9" fill="#3b82f6" stroke="#ffffff" stroke-width="2"/>
+                                    <text x="-12" y="4" fill="#1e40af" font-family="Inter, sans-serif" font-size="10" font-weight="600" text-anchor="end">Armazém JM</text>
+                                </g>
+
+                                <!-- MAIN DESTINATION PIN: R.Almeida Higienização de Sofás (2284) -->
+                                <g transform="translate(432, 238)">
+                                    <!-- Pulse rings -->
+                                    <circle cx="0" cy="0" r="34" fill="#ef4444" opacity="0.18"/>
+                                    <circle cx="0" cy="0" r="18" fill="#ef4444" opacity="0.32"/>
+                                    <!-- Pin Shadow -->
+                                    <ellipse cx="0" cy="4" rx="8" ry="3.5" fill="rgba(0,0,0,0.35)"/>
+                                    <!-- Google Maps Red Pin Shape -->
+                                    <path d="M0 -38 C-12 -38 -20 -29 -20 -18 C-20 -4 0 2 0 2 C0 2 20 -4 20 -18 C20 -29 12 -38 0 -38 Z" fill="#dc2626" stroke="#ffffff" stroke-width="2.5"/>
+                                    <circle cx="0" cy="-19" r="6.5" fill="#7f1d1d"/>
+                                    <!-- Label Callout Box right next to pin -->
+                                    <g transform="translate(24, -34)">
+                                        <rect x="0" y="0" width="215" height="44" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+                                        <text x="12" y="18" fill="#dc2626" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="800">R.Almeida Higienização</text>
+                                        <text x="12" y="34" fill="#334155" font-family="Inter, sans-serif" font-size="10" font-weight="600">R. Juvino Leme Bueno, 2284</text>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <!-- Top-Left Floating Business Facade & Route Card -->
+                        <div class="absolute top-3.5 left-3.5 z-20 bg-white/95 backdrop-blur-md text-slate-900 p-3.5 rounded-2xl shadow-xl border border-slate-200 max-w-[290px]">
+                            <div class="flex items-center gap-3">
+                                <!-- Mini Facade / Sofa Hygiene Visual Badge -->
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-600 to-brand-800 text-white flex flex-col items-center justify-center shrink-0 shadow">
+                                    <i class="fa-solid fa-couch text-sm"></i>
+                                    <span class="text-[9px] font-extrabold uppercase mt-0.5">Nº 2284</span>
+                                </div>
+                                <div class="min-w-0">
+                                    <div class="flex items-center gap-1">
+                                        <span class="font-display font-extrabold text-xs sm:text-sm text-slate-900 truncate">R.Almeida Sofás</span>
+                                        <span class="text-[11px] font-bold text-amber-500 shrink-0">5,0 ★</span>
+                                    </div>
+                                    <p class="text-[11px] text-slate-600 truncate">Juvino Leme Bueno, 2284 - Vicentina</p>
+                                    <a href="https://www.google.com/maps/dir/?api=1&destination=-22.4109114,-54.4242613"
+                                       target="_blank" rel="noopener noreferrer"
+                                       class="inline-flex items-center gap-1 text-[11px] font-bold text-brand-600 hover:text-brand-700 mt-0.5">
+                                        <i class="fa-solid fa-location-arrow"></i> Iniciar navegação GPS
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom-Right Zoom & Reset Controls (Google Maps Style) -->
+                        <div class="absolute bottom-4 right-4 z-20 flex flex-col gap-1.5">
+                            <button type="button" onclick="zoomVectorMap(0.25)" title="Aumentar Zoom"
+                                    class="w-10 h-10 rounded-xl bg-white hover:bg-slate-100 text-slate-800 shadow-lg border border-slate-200 flex items-center justify-center font-bold text-base transition">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                            <button type="button" onclick="zoomVectorMap(-0.25)" title="Diminuir Zoom"
+                                    class="w-10 h-10 rounded-xl bg-white hover:bg-slate-100 text-slate-800 shadow-lg border border-slate-200 flex items-center justify-center font-bold text-base transition">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                            <button type="button" onclick="resetVectorMap()" title="Centralizar na R.Almeida"
+                                    class="w-10 h-10 rounded-xl bg-brand-600 hover:bg-brand-500 text-white shadow-lg flex items-center justify-center text-sm transition">
+                                <i class="fa-solid fa-crosshairs"></i>
+                            </button>
+                        </div>
+
+                        <!-- Bottom-Left Coordinates & Landmarks Pill -->
+                        <div class="absolute bottom-4 left-4 z-20 hidden sm:flex items-center gap-2 bg-slate-900/90 backdrop-blur-sm text-white px-3.5 py-2 rounded-xl text-xs border border-slate-700 shadow-lg">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                            <span>Referências: Próx. à <strong>UBS da Família</strong> e <strong>Chácara Kirei</strong></span>
+                        </div>
+                    </div>
+
+                    <!-- TAB 2: Official Live Google Maps Embed Iframe -->
+                    <div id="map-panel-iframe" class="hidden relative w-full min-h-[460px] h-[460px] bg-slate-900">
+                        <iframe
+                            title="Localização R.Almeida Higienização de Sofás - Rua Juvino Leme Bueno, 2284, Vicentina, MS"
+                            src="https://maps.google.com/maps?q=-22.4109114,-54.4242613&hl=pt-BR&z=17&output=embed"
+                            width="100%"
+                            height="460"
+                            style="border:0; min-height: 460px; width: 100%; display: block;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <!-- Floating Fallback / Direct App Bar -->
+                        <div class="absolute bottom-3 left-3 right-3 z-10 bg-slate-900/90 backdrop-blur-md p-2.5 rounded-xl border border-slate-700 flex items-center justify-between gap-2 text-xs">
+                            <span class="text-slate-200 truncate">
+                                <i class="fa-solid fa-location-dot text-red-500 mr-1"></i>
+                                Rua Juvino Leme Bueno, 2284 - Vicentina, MS
+                            </span>
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=-22.4109114,-54.4242613"
+                               target="_blank" rel="noopener noreferrer"
+                               class="shrink-0 bg-brand-600 hover:bg-brand-500 text-white font-bold px-3 py-1.5 rounded-lg transition">
+                                Abrir no Google Maps
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Footer Bar of Map Card: Regional Coverage -->
+                    <div class="bg-slate-900/95 px-5 py-3.5 border-t border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+                        <div class="text-slate-300 text-center sm:text-left">
+                            <i class="fa-solid fa-truck-fast text-brand-400 mr-1.5"></i>
+                            Atendemos no local ou a domicílio em <strong>Vicentina, Fátima do Sul, Glória de Dourados, Culturama e Jateí</strong>.
+                        </div>
+                        <span class="shrink-0 text-amber-400 font-bold">5,0 ★★★★★ no Google</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 py-10 border-t border-slate-800/80 text-xs sm:text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div>
+                <p class="font-display font-bold text-white text-base">R.Almeida Higienização de Sofás</p>
+                <p class="mt-1">Rua Juvino Leme Bueno, 2284 - Vicentina, MS, 79710-000 • Tel: (67) 99813-8086</p>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <span class="inline-flex items-center gap-1.5 text-slate-300">
+                    <i class="fa-solid fa-heart text-purple-400"></i> Empresa de Empreendedoras
+                </span>
+                <span>•</span>
+                <span class="inline-flex items-center gap-1.5 text-slate-300">
+                    <i class="fa-solid fa-rainbow text-pink-400"></i> Acolhe a Comunidade LGBTQ+
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/5567998138086?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20na%20R.Almeida%20Higieniza%C3%A7%C3%A3o%20de%20Sof%C3%A1s."
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Conversar no WhatsApp"
+       class="fixed bottom-5 right-5 z-50 flex items-center gap-2.5 bg-whatsapp hover:bg-whatsapp-dark text-white font-bold px-4 py-3.5 rounded-full shadow-2xl whatsapp-pulse transition-all group">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span class="hidden sm:inline text-sm pr-1">Orçamento no WhatsApp</span>
+    </a>
+
+    <!-- CUSTOM TOAST NOTIFICATION (Replaces alert) -->
+    <div id="custom-toast" class="fixed bottom-24 right-5 z-50 hidden bg-slate-900 text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-slate-700 flex items-center gap-3 transition-all">
+        <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+        <span id="custom-toast-msg" class="text-xs sm:text-sm font-semibold">Copiado com sucesso!</span>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // ==========================================
+        // 1. MOBILE MENU TOGGLE
+        // ==========================================
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenuIcon.classList.remove('fa-bars');
+                mobileMenuIcon.classList.add('fa-xmark');
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenuIcon.classList.remove('fa-xmark');
+                mobileMenuIcon.classList.add('fa-bars');
+            }
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuIcon.classList.remove('fa-xmark');
+                mobileMenuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // ==========================================
+        // 2. LIVE BUSINESS HOURS STATUS INDICATOR (07:00 - 17:00 Mon-Sat)
+        // ==========================================
+        function updateLiveBusinessStatus() {
+            const now = new Date();
+            const day = now.getDay(); // 0 = Domingo, 1 = Segunda ... 6 = Sábado
+            const hour = now.getHours();
+            const minutes = now.getMinutes();
+            const currentTimeDecimal = hour + (minutes / 60);
+
+            const statusText = document.getElementById('live-status-text');
+            const statusBadge = document.getElementById('live-status-badge');
+            const statusDot = document.getElementById('live-status-dot');
+            const hoursCardStatus = document.getElementById('hours-card-status');
+
+            // Highlight current day row in the schedule table
+            document.querySelectorAll('.day-row').forEach(row => {
+                const rowDay = parseInt(row.getAttribute('data-day'), 10);
+                if (rowDay === day) {
+                    row.className = 'day-row flex justify-between items-center py-1.5 px-2.5 rounded-lg bg-brand-500/20 border border-brand-400/30 font-bold';
+                    const dayNameSpan = row.querySelector('span:first-child');
+                    if (dayNameSpan && !dayNameSpan.textContent.includes('(Hoje)')) {
+                        dayNameSpan.textContent = dayNameSpan.textContent + ' (Hoje)';
+                        dayNameSpan.className = 'text-sky-300 font-bold';
+                    }
+                }
+            });
+
+            // Open Monday (1) through Saturday (6), from 07:00 up to 17:00
+            const isOpen = (day >= 1 && day <= 6) && (currentTimeDecimal >= 7 && currentTimeDecimal < 17);
+
+            if (isOpen) {
+                statusText.textContent = 'Aberto agora · Fecha às 17:00';
+                statusBadge.className = 'inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 hover:opacity-90 transition';
+                statusDot.className = 'w-2 h-2 rounded-full bg-emerald-400 animate-ping';
+                if (hoursCardStatus) {
+                    hoursCardStatus.textContent = 'Aberto agora · Fecha às 17:00';
+                    hoursCardStatus.className = 'text-xs font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30';
+                }
+            } else {
+                let nextOpenMsg = 'Fechado · Abre seg. às 07:00';
+                if (day >= 1 && day <= 6 && currentTimeDecimal < 7) {
+                    nextOpenMsg = 'Fechado · Abre hoje às 07:00';
+                } else if (day >= 1 && day <= 5 && currentTimeDecimal >= 17) {
+                    nextOpenMsg = 'Fechado · Abre amanhã às 07:00';
+                } else if (day === 6 && currentTimeDecimal >= 17) {
+                    nextOpenMsg = 'Fechado · Abre seg. às 07:00';
+                } else if (day === 0) {
+                    nextOpenMsg = 'Fechado · Abre seg. às 07:00';
+                }
+
+                statusText.textContent = nextOpenMsg;
+                statusBadge.className = 'inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30 hover:opacity-90 transition';
+                statusDot.className = 'w-2 h-2 rounded-full bg-amber-400';
+                if (hoursCardStatus) {
+                    hoursCardStatus.textContent = nextOpenMsg;
+                    hoursCardStatus.className = 'text-xs font-bold px-2.5 py-0.5 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30';
+                }
+            }
+        }
+        updateLiveBusinessStatus();
+
+        // ==========================================
+        // 3. REALISTIC PROCEDURAL UPHOLSTERY RENDERER (CLEAN VS DIRTY WITHOUT CSS FILTERS)
+        // ==========================================
+        // Pseudo-random deterministic generator so stains look organic and consistent
+        function seededRandom(seed) {
+            let x = Math.sin(seed) * 10000;
+            return x - Math.floor(x);
+        }
+
+        // Helper: Draw realistic organic multi-layered stain blotch (coffee ring, sweat halo, mud spot)
+        function drawOrganicStain(ctx, cx, cy, rx, ry, rotation, baseColorRGB, ringColorRGB, intensity, seedStart) {
+            ctx.save();
+            ctx.translate(cx, cy);
+            ctx.rotate(rotation);
+
+            // Outer irregular capillary water/coffee ring
+            for (let layer = 0; layer < 4; layer++) {
+                const scale = 1 - layer * 0.16;
+                ctx.beginPath();
+                const steps = 36;
+                for (let i = 0; i <= steps; i++) {
+                    const angle = (i / steps) * Math.PI * 2;
+                    const noise = 0.82 + 0.34 * seededRandom(seedStart + i * 7 + layer * 31) + 0.12 * Math.sin(angle * 5);
+                    const px = Math.cos(angle) * rx * scale * noise;
+                    const py = Math.sin(angle) * ry * scale * noise;
+                    if (i === 0) ctx.moveTo(px, py);
+                    else ctx.lineTo(px, py);
+                }
+                ctx.closePath();
+
+                const grad = ctx.createRadialGradient(0, 0, rx * 0.15 * scale, 0, 0, Math.max(rx, ry) * scale);
+                grad.addColorStop(0, `rgba(${baseColorRGB}, ${intensity * 0.65})`);
+                grad.addColorStop(0.68, `rgba(${baseColorRGB}, ${intensity * 0.85})`);
+                grad.addColorStop(0.92, `rgba(${ringColorRGB}, ${intensity * 1.15})`);
+                grad.addColorStop(1, `rgba(${ringColorRGB}, 0)`);
+
+                ctx.fillStyle = grad;
+                ctx.fill();
+            }
+
+            // Micro-speckles & embedded dirt particles around the stain
+            for (let p = 0; p < 45; p++) {
+                const ang = seededRandom(seedStart + p * 13) * Math.PI * 2;
+                const dist = seededRandom(seedStart + p * 29) * 1.15;
+                const sx = Math.cos(ang) * rx * dist;
+                const sy = Math.sin(ang) * ry * dist;
+                const rad = 1.2 + seededRandom(seedStart + p * 41) * 3.8;
+                ctx.fillStyle = `rgba(${ringColorRGB}, ${intensity * 0.45 * seededRandom(seedStart + p)})`;
+                ctx.beginPath();
+                ctx.arc(sx, sy, rad, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            ctx.restore();
+        }
+
+        // Helper: Draw fine woven fabric texture across an upholstery surface
+        function drawFabricWeavePattern(ctx, w, h, threadLight, threadDark) {
+            ctx.save();
+            ctx.strokeStyle = threadLight;
+            ctx.lineWidth = 1;
+            for (let y = 0; y < h; y += 4) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(w, y);
+                ctx.stroke();
+            }
+            ctx.strokeStyle = threadDark;
+            for (let x = 0; x < w; x += 4) {
+                ctx.beginPath();
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, h);
+                ctx.stroke();
+            }
+            ctx.restore();
+        }
+
+        // -----------------------------------------------------------
+        // SCENE A: AUTOMOTIVE CAR SEAT (BANCO DE CARRO EM TECIDO CINZA)
+        // Inspired by R.Almeida's Google Maps photos of grey car seats
+        // -----------------------------------------------------------
+        function renderCarSeatScene(ctx, w, h, isDirty) {
+            ctx.clearRect(0, 0, w, h);
+
+            // 1. Car Cabin Interior Background (Door trim, console, dark cabin)
+            const bgGrad = ctx.createLinearGradient(0, 0, w, h);
+            bgGrad.addColorStop(0, '#1e293b');
+            bgGrad.addColorStop(0.5, '#0f172a');
+            bgGrad.addColorStop(1, '#090d16');
+            ctx.fillStyle = bgGrad;
+            ctx.fillRect(0, 0, w, h);
+
+            // Car window subtle daylight reflection in top-left corner
+            const winGrad = ctx.createLinearGradient(0, 0, w * 0.4, h * 0.45);
+            winGrad.addColorStop(0, 'rgba(186, 230, 253, 0.16)');
+            winGrad.addColorStop(1, 'rgba(15, 23, 42, 0)');
+            ctx.fillStyle = winGrad;
+            ctx.beginPath();
+            ctx.moveTo(0, 0);
+            ctx.lineTo(w * 0.42, 0);
+            ctx.lineTo(w * 0.25, h * 0.45);
+            ctx.lineTo(0, h * 0.35);
+            ctx.closePath();
+            ctx.fill();
+
+            // Center console & gear shift hint on lower left (like the Google Maps photo)
+            ctx.fillStyle = '#111827';
+            ctx.beginPath();
+            ctx.roundRect(w * 0.04, h * 0.72, w * 0.22, h * 0.32, 24);
+            ctx.fill();
+            ctx.strokeStyle = '#334155';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // Seatbelt red buckle on the side
+            ctx.fillStyle = '#dc2626';
+            ctx.beginPath();
+            ctx.roundRect(w * 0.24, h * 0.67, 28, 42, 6);
+            ctx.fill();
+            ctx.fillStyle = '#991b1b';
+            ctx.fillRect(w * 0.24 + 5, h * 0.67 + 6, 18, 12);
+
+            // 2. Main Automotive Front Seat Geometry
+            const cx = w * 0.54;
+
+            // Headrest (Encosto de Cabeça)
+            ctx.save();
+            // Chrome metal headrest posts
+            ctx.fillStyle = '#94a3b8';
+            ctx.fillRect(cx - 55, h * 0.16, 12, 35);
+            ctx.fillRect(cx + 43, h * 0.16, 12, 35);
+
+            // Headrest Cushion
+            ctx.beginPath();
+            ctx.roundRect(cx - 105, h * 0.03, 210, h * 0.15, [42, 42, 24, 24]);
+            const headGrad = ctx.createLinearGradient(cx - 105, h * 0.03, cx + 105, h * 0.18);
+            headGrad.addColorStop(0, '#64748b');
+            headGrad.addColorStop(0.5, '#94a3b8');
+            headGrad.addColorStop(1, '#475569');
+            ctx.fillStyle = headGrad;
+            ctx.fill();
+            ctx.lineWidth = 2.5;
+            ctx.strokeStyle = '#334155';
+            ctx.stroke();
+
+            // If dirty: head/hair oil darkening on center of headrest
+            if (isDirty) {
+                drawOrganicStain(ctx, cx, h * 0.105, 58, 32, 0.05, '45, 35, 24', '30, 22, 15', 0.62, 101);
+            }
+            ctx.restore();
+
+            // 3. Seat Backrest (Encosto Principal com Abas Esportivas Laterais)
+            ctx.save();
+            // Outer Left & Right Side Bolsters (Abas laterais do banco automotivo)
+            ctx.beginPath();
+            ctx.roundRect(cx - 195, h * 0.18, 390, h * 0.50, [68, 68, 35, 35]);
+            const bolsterGrad = ctx.createLinearGradient(cx - 195, h * 0.18, cx + 195, h * 0.68);
+            bolsterGrad.addColorStop(0, '#475569');
+            bolsterGrad.addColorStop(0.22, '#64748b');
+            bolsterGrad.addColorStop(0.5, '#94a3b8');
+            bolsterGrad.addColorStop(0.78, '#64748b');
+            bolsterGrad.addColorStop(1, '#334155');
+            ctx.fillStyle = bolsterGrad;
+            ctx.fill();
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = '#1e293b';
+            ctx.stroke();
+
+            // Center Backrest Ribbed Insert (Gomos Horizontais do Banco)
+            ctx.beginPath();
+            ctx.roundRect(cx - 120, h * 0.21, 240, h * 0.45, 28);
+            const centerBackGrad = ctx.createLinearGradient(cx - 120, h * 0.21, cx + 120, h * 0.66);
+            centerBackGrad.addColorStop(0, '#78879b');
+            centerBackGrad.addColorStop(0.5, '#a1b0c4');
+            centerBackGrad.addColorStop(1, '#64748b');
+            ctx.fillStyle = centerBackGrad;
+            ctx.fill();
+
+            // Horizontal Quilted Ribs on Backrest
+            ctx.strokeStyle = '#334155';
+            ctx.lineWidth = 2.5;
+            const ribHeights = [0.31, 0.41, 0.51, 0.60];
+            ribHeights.forEach(rh => {
+                ctx.beginPath();
+                ctx.moveTo(cx - 118, h * rh);
+                ctx.quadraticCurveTo(cx, h * (rh + 0.015), cx + 118, h * rh);
+                ctx.stroke();
+
+                // Highlight thread below seam
+                ctx.save();
+                ctx.strokeStyle = isDirty ? 'rgba(120, 95, 70, 0.45)' : 'rgba(226, 232, 240, 0.55)';
+                ctx.lineWidth = 1.2;
+                ctx.setLineDash([5, 4]);
+                ctx.beginPath();
+                ctx.moveTo(cx - 114, h * rh + 4);
+                ctx.quadraticCurveTo(cx, h * (rh + 0.015) + 4, cx + 114, h * rh + 4);
+                ctx.stroke();
+                ctx.restore();
+            });
+
+            // Double contrast stitching on side bolsters
+            ctx.save();
+            ctx.strokeStyle = isDirty ? '#78624c' : '#e2e8f0';
+            ctx.lineWidth = 1.8;
+            ctx.setLineDash([6, 4]);
+            ctx.strokeRect(cx - 120, h * 0.21, 240, h * 0.45);
+            ctx.restore();
+
+            // Realistic Stains on Backrest (ONLY ON BEFORE LAYER)
+            if (isDirty) {
+                // Sweat and body oil darkening in the middle of the backrest
+                drawOrganicStain(ctx, cx - 5, h * 0.39, 98, 85, -0.08, '58, 46, 32', '42, 30, 18', 0.68, 202);
+                // Reddish-brown road dust / MS terra vermelha along lower lumbar seam
+                drawOrganicStain(ctx, cx + 25, h * 0.56, 88, 42, 0.12, '115, 68, 38', '85, 48, 22', 0.58, 309);
+                // Left bolster hand grease mark from getting in/out of the car
+                drawOrganicStain(ctx, cx - 155, h * 0.44, 34, 95, 0.05, '40, 34, 28', '25, 20, 15', 0.72, 415);
+            }
+            ctx.restore();
+
+            // 4. Seat Bottom Cushion (Assento do Banco Automotivo)
+            ctx.save();
+            ctx.beginPath();
+            ctx.roundRect(cx - 215, h * 0.64, 430, h * 0.31, [40, 40, 55, 55]);
+            const seatPanGrad = ctx.createLinearGradient(cx - 215, h * 0.64, cx + 215, h * 0.95);
+            seatPanGrad.addColorStop(0, '#475569');
+            seatPanGrad.addColorStop(0.2, '#78879b');
+            seatPanGrad.addColorStop(0.5, '#94a3b8');
+            seatPanGrad.addColorStop(0.8, '#64748b');
+            seatPanGrad.addColorStop(1, '#334155');
+            ctx.fillStyle = seatPanGrad;
+            ctx.fill();
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = '#1e293b';
+            ctx.stroke();
+
+            // Center Seat Cushion Insert
+            ctx.beginPath();
+            ctx.roundRect(cx - 135, h * 0.66, 270, h * 0.26, 26);
+            const seatInsertGrad = ctx.createLinearGradient(cx, h * 0.66, cx, h * 0.92);
+            seatInsertGrad.addColorStop(0, '#64748b');
+            seatInsertGrad.addColorStop(0.45, '#a1b0c4');
+            seatInsertGrad.addColorStop(1, '#78879b');
+            ctx.fillStyle = seatInsertGrad;
+            ctx.fill();
+
+            // Seat Cushion Seam Lines
+            [0.75, 0.84].forEach(sh => {
+                ctx.strokeStyle = '#334155';
+                ctx.lineWidth = 2.5;
+                ctx.beginPath();
+                ctx.moveTo(cx - 132, h * sh);
+                ctx.quadraticCurveTo(cx, h * (sh + 0.015), cx + 132, h * sh);
+                ctx.stroke();
+            });
+
+            // Stitching around seat cushion insert
+            ctx.save();
+            ctx.strokeStyle = isDirty ? '#78624c' : '#e2e8f0';
+            ctx.lineWidth = 1.8;
+            ctx.setLineDash([6, 4]);
+            ctx.strokeRect(cx - 135, h * 0.66, 270, h * 0.26);
+            ctx.restore();
+
+            // Realistic Stains on Seat Cushion (ONLY ON BEFORE LAYER)
+            if (isDirty) {
+                // Large spilled coffee / soda stain with distinct dark outer water ring on the seat pan
+                drawOrganicStain(ctx, cx - 22, h * 0.78, 86, 54, 0.18, '92, 60, 32', '58, 35, 14', 0.78, 512);
+                // Secondary liquid stain / sweat halo on right side of seat cushion
+                drawOrganicStain(ctx, cx + 62, h * 0.83, 64, 42, -0.22, '75, 58, 38', '48, 34, 18', 0.65, 619);
+                // Embedded dust & crumbs along the back crease of the seat
+                drawOrganicStain(ctx, cx, h * 0.67, 130, 22, 0, '52, 40, 28', '35, 25, 16', 0.75, 720);
+                // Thigh bolster wear & dirt on outer edge
+                drawOrganicStain(ctx, cx - 175, h * 0.79, 36, 68, -0.1, '55, 43, 30', '38, 28, 18', 0.68, 830);
+            }
+            ctx.restore();
+
+            // 5. Micro-Weave Texture Overlay across entire canvas for tactile realism
+            drawFabricWeavePattern(ctx, w, h, 'rgba(255,255,255,0.03)', 'rgba(0,0,0,0.06)');
+
+            // 6. On-Canvas Visual Callout Annotations for the BEFORE (Dirty) state
+            if (isDirty) {
+                drawStainCallout(ctx, cx - 25, h * 0.78, cx - 190, h * 0.88, 'Mancha de Café / Líquido');
+                drawStainCallout(ctx, cx, h * 0.39, cx - 185, h * 0.32, 'Suor e Gordura Corporal');
+                drawStainCallout(ctx, cx + 25, h * 0.56, cx + 165, h * 0.54, 'Poeira nas Costuras');
+            }
+        }
+
+        // -----------------------------------------------------------
+        // SCENE B: RESIDENTIAL SOFA (SOFÁ RETRÁTIL EM SUEDE BEGE/MARROM)
+        // -----------------------------------------------------------
+        function renderSofaScene(ctx, w, h, isDirty) {
+            ctx.clearRect(0, 0, w, h);
+
+            // Living Room Wall & Floor Background
+            const wallGrad = ctx.createLinearGradient(0, 0, 0, h);
+            wallGrad.addColorStop(0, '#f1f5f9');
+            wallGrad.addColorStop(0.7, '#e2e8f0');
+            wallGrad.addColorStop(1, '#cbd5e1');
+            ctx.fillStyle = wallGrad;
+            ctx.fillRect(0, 0, w, h);
+
+            // Sofa Base Frame
+            ctx.fillStyle = '#785a46';
+            ctx.beginPath();
+            ctx.roundRect(w * 0.08, h * 0.76, w * 0.84, h * 0.16, 18);
+            ctx.fill();
+
+            // Left & Right Wide Padded Armrests (Braços do Sofá)
+            const armColorTop = '#b89b82';
+            const armColorBot = '#8c6d53';
+            [w * 0.06, w * 0.79].forEach((ax, idx) => {
+                ctx.save();
+                const armGrad = ctx.createLinearGradient(ax, h * 0.36, ax, h * 0.85);
+                armGrad.addColorStop(0, armColorTop);
+                armGrad.addColorStop(1, armColorBot);
+                ctx.fillStyle = armGrad;
+                ctx.beginPath();
+                ctx.roundRect(ax, h * 0.38, w * 0.15, h * 0.46, 28);
+                ctx.fill();
+                ctx.strokeStyle = '#6e523c';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                if (isDirty) {
+                    // Dark hand/arm oil grime on top of sofa armrests
+                    drawOrganicStain(ctx, ax + w * 0.075, h * 0.45, 55, 38, idx === 0 ? 0.1 : -0.1, '62, 44, 28', '42, 28, 16', 0.72, 910 + idx * 50);
+                }
+                ctx.restore();
+            });
+
+            // 2 Plush Backrest Cushions (Almofadas do Encosto)
+            [w * 0.20, w * 0.50].forEach((bx, idx) => {
+                ctx.save();
+                const backGrad = ctx.createLinearGradient(bx, h * 0.14, bx, h * 0.58);
+                backGrad.addColorStop(0, '#cbb299');
+                backGrad.addColorStop(0.5, '#bfa388');
+                backGrad.addColorStop(1, '#9c7e63');
+                ctx.fillStyle = backGrad;
+                ctx.beginPath();
+                ctx.roundRect(bx, h * 0.15, w * 0.295, h * 0.42, 32);
+                ctx.fill();
+                ctx.strokeStyle = '#7c6047';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                // Tufted plush dimples
+                ctx.fillStyle = 'rgba(90, 65, 45, 0.35)';
+                ctx.beginPath();
+                ctx.arc(bx + w * 0.10, h * 0.35, 6, 0, Math.PI * 2);
+                ctx.arc(bx + w * 0.195, h * 0.35, 6, 0, Math.PI * 2);
+                ctx.fill();
+
+                if (isDirty) {
+                    if (idx === 0) {
+                        drawOrganicStain(ctx, bx + w * 0.15, h * 0.38, 82, 55, -0.12, '78, 54, 34', '52, 34, 18', 0.65, 1020);
+                    } else {
+                        drawOrganicStain(ctx, bx + w * 0.13, h * 0.34, 74, 48, 0.15, '85, 58, 36', '58, 38, 20', 0.6, 1120);
+                    }
+                }
+                ctx.restore();
+            });
+
+            // 2 Retractable Seat Cushions (Assentos Retráteis)
+            [w * 0.20, w * 0.50].forEach((sx, idx) => {
+                ctx.save();
+                const seatGrad = ctx.createLinearGradient(sx, h * 0.52, sx, h * 0.84);
+                seatGrad.addColorStop(0, '#d5beaa');
+                seatGrad.addColorStop(0.6, '#c2a68d');
+                seatGrad.addColorStop(1, '#9a7b60');
+                ctx.fillStyle = seatGrad;
+                ctx.beginPath();
+                ctx.roundRect(sx, h * 0.53, w * 0.295, h * 0.29, 26);
+                ctx.fill();
+                ctx.strokeStyle = '#7c6047';
+                ctx.lineWidth = 2.2;
+                ctx.stroke();
+
+                if (isDirty) {
+                    if (idx === 0) {
+                        // Food / drink spill on left cushion
+                        drawOrganicStain(ctx, sx + w * 0.14, h * 0.66, 78, 46, 0.08, '88, 52, 24', '58, 32, 12', 0.82, 1250);
+                    } else {
+                        // Pet muddy paw prints & general darkening on right cushion
+                        drawOrganicStain(ctx, sx + w * 0.16, h * 0.68, 85, 50, -0.14, '72, 50, 32', '48, 32, 18', 0.70, 1350);
+                        drawOrganicStain(ctx, sx + w * 0.08, h * 0.62, 28, 22, 0.3, '65, 42, 22', '45, 28, 12', 0.78, 1410);
+                    }
+                }
+                ctx.restore();
+            });
+
+            drawFabricWeavePattern(ctx, w, h, 'rgba(255,255,255,0.04)', 'rgba(60,40,20,0.05)');
+
+            if (isDirty) {
+                drawStainCallout(ctx, w * 0.34, h * 0.66, w * 0.22, h * 0.88, 'Mancha de Bebida / Comida');
+                drawStainCallout(ctx, w * 0.135, h * 0.45, w * 0.16, h * 0.22, 'Escurecimento nos Braços');
+                drawStainCallout(ctx, w * 0.66, h * 0.68, w * 0.76, h * 0.88, 'Sujeira de Pet e Poeira');
+            }
+        }
+
+        // -----------------------------------------------------------
+        // SCENE C: QUILTED MATTRESS (COLCHÃO CASAL / QUEEN MATELASSÊ)
+        // -----------------------------------------------------------
+        function renderMattressScene(ctx, w, h, isDirty) {
+            ctx.clearRect(0, 0, w, h);
+
+            // Bedroom Soft Background
+            ctx.fillStyle = '#1e293b';
+            ctx.fillRect(0, 0, w, h);
+
+            // Mattress Top Surface (Tampo em Malha Matelassê Branca)
+            ctx.save();
+            ctx.beginPath();
+            ctx.roundRect(w * 0.08, h * 0.12, w * 0.84, h * 0.62, [36, 36, 16, 16]);
+            const matGrad = ctx.createLinearGradient(w * 0.08, h * 0.12, w * 0.92, h * 0.74);
+            matGrad.addColorStop(0, '#ffffff');
+            matGrad.addColorStop(0.5, '#f8fafc');
+            matGrad.addColorStop(1, '#e2e8f0');
+            ctx.fillStyle = matGrad;
+            ctx.fill();
+
+            // Diamond Quilted Stitching Pattern (Costura Matelassê)
+            ctx.strokeStyle = '#cbd5e1';
+            ctx.lineWidth = 1.5;
+            ctx.clip();
+            for (let i = -h; i < w + h; i += 48) {
+                ctx.beginPath();
+                ctx.moveTo(i, h * 0.12);
+                ctx.lineTo(i + h * 0.65, h * 0.74);
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.moveTo(i, h * 0.74);
+                ctx.lineTo(i + h * 0.65, h * 0.12);
+                ctx.stroke();
+            }
+
+            if (isDirty) {
+                // Realistic yellow/amber sweat & humidity stains with organic oxidized borders
+                drawOrganicStain(ctx, w * 0.36, h * 0.42, 135, 92, 0.12, '215, 175, 95', '175, 128, 48', 0.76, 1510);
+                drawOrganicStain(ctx, w * 0.64, h * 0.46, 115, 84, -0.18, '205, 162, 82', '165, 118, 42', 0.68, 1620);
+                // Greyish dust mite & dead skin accumulation zone
+                drawOrganicStain(ctx, w * 0.50, h * 0.28, 160, 55, 0.02, '145, 135, 118', '115, 102, 84', 0.52, 1730);
+            }
+            ctx.restore();
+
+            // Mattress Side Border (Faixa Lateral Pespontada)
+            ctx.save();
+            ctx.beginPath();
+            ctx.roundRect(w * 0.08, h * 0.68, w * 0.84, h * 0.22, [8, 8, 28, 28]);
+            const sideGrad = ctx.createLinearGradient(0, h * 0.68, 0, h * 0.90);
+            sideGrad.addColorStop(0, '#cbd5e1');
+            sideGrad.addColorStop(1, '#94a3b8');
+            ctx.fillStyle = sideGrad;
+            ctx.fill();
+            ctx.strokeStyle = '#64748b';
+            ctx.lineWidth = 3;
+            ctx.stroke();
+            ctx.restore();
+
+            if (isDirty) {
+                drawStainCallout(ctx, w * 0.36, h * 0.42, w * 0.22, h * 0.20, 'Mancha Amarelada de Suor');
+                drawStainCallout(ctx, w * 0.64, h * 0.46, w * 0.76, h * 0.24, 'Mancha de Umidade / Urina');
+            }
+        }
+
+        // Helper: Draw visual callout pointer on the BEFORE canvas
+        function drawStainCallout(ctx, targetX, targetY, labelX, labelY, text) {
+            ctx.save();
+            // Pulsing target ring
+            ctx.strokeStyle = '#fbbf24';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.arc(targetX, targetY, 10, 0, Math.PI * 2);
+            ctx.stroke();
+
+            // Connecting line
+            ctx.beginPath();
+            ctx.moveTo(targetX, targetY);
+            ctx.lineTo(labelX, labelY);
+            ctx.stroke();
+
+            // Label pill
+            ctx.font = 'bold 13px Inter, sans-serif';
+            const textWidth = ctx.measureText(text).width;
+            const padX = 10;
+            const boxW = textWidth + padX * 2;
+            const boxH = 26;
+
+            ctx.fillStyle = 'rgba(15, 23, 42, 0.92)';
+            ctx.beginPath();
+            ctx.roundRect(labelX - boxW / 2, labelY - boxH / 2, boxW, boxH, 8);
+            ctx.fill();
+            ctx.strokeStyle = '#f59e0b';
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
+
+            ctx.fillStyle = '#fef3c7';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(text, labelX, labelY);
+            ctx.restore();
+        }
+
+        // Render both Before (Dirty) and After (Clean, Filter-free) canvases for selected category
+        let currentCategory = 'car';
+
+        function renderComparisonCanvases(category) {
+            const canvasAfter = document.getElementById('canvas-after');
+            const canvasBefore = document.getElementById('canvas-before');
+            if (!canvasAfter || !canvasBefore) return;
+
+            const ctxAfter = canvasAfter.getContext('2d');
+            const ctxBefore = canvasBefore.getContext('2d');
+            const w = canvasAfter.width;
+            const h = canvasAfter.height;
+
+            if (category === 'car') {
+                renderCarSeatScene(ctxAfter, w, h, false); // 100% Clean Car Seat (No filters)
+                renderCarSeatScene(ctxBefore, w, h, true); // Realistic Stained Car Seat
+            } else if (category === 'sofa') {
+                renderSofaScene(ctxAfter, w, h, false);    // 100% Clean Sofa
+                renderSofaScene(ctxBefore, w, h, true);    // Realistic Stained Sofa
+            } else {
+                renderMattressScene(ctxAfter, w, h, false);// 100% Clean Mattress
+                renderMattressScene(ctxBefore, w, h, true);// Realistic Stained Mattress
+            }
+        }
+
+        // Render Hero Thumbnails so there is no external sports car photo anywhere
+        function renderHeroThumbnails() {
+            const seatThumb = document.getElementById('hero-seat-canvas');
+            const sofaThumb = document.getElementById('hero-sofa-canvas');
+            if (seatThumb) {
+                renderCarSeatScene(seatThumb.getContext('2d'), seatThumb.width, seatThumb.height, false);
+            }
+            if (sofaThumb) {
+                renderSofaScene(sofaThumb.getContext('2d'), sofaThumb.width, sofaThumb.height, false);
+            }
+        }
+
+        // ==========================================
+        // 4. INTERACTIVE SLIDER CONTROLS
+        // ==========================================
+        const slider = document.getElementById('ba-slider');
+        const beforeLayer = document.getElementById('ba-before-layer');
+        const beforeInner = document.getElementById('ba-before-inner');
+        const handle = document.getElementById('ba-handle');
+        let isDragging = false;
+        let currentPercent = 50;
+
+        function syncBeforeImageWidth() {
+            if (!slider || !beforeInner) return;
+            beforeInner.style.width = slider.offsetWidth + 'px';
+        }
+
+        function setSliderPosition(percentage) {
+            currentPercent = Math.max(4, Math.min(96, percentage));
+            beforeLayer.style.width = currentPercent + '%';
+            handle.style.left = currentPercent + '%';
+        }
+
+        function animateSliderTo(targetPercent) {
+            const start = currentPercent;
+            const diff = targetPercent - start;
+            const duration = 350;
+            const startTime = performance.now();
+
+            function step(now) {
+                const elapsed = now - startTime;
+                const progress = Math.min(1, elapsed / duration);
+                const ease = 1 - Math.pow(1 - progress, 3);
+                setSliderPosition(start + diff * ease);
+                if (progress < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+
+        function handleMove(clientX) {
+            const rect = slider.getBoundingClientRect();
+            const offsetX = clientX - rect.left;
+            const percentage = (offsetX / rect.width) * 100;
+            setSliderPosition(percentage);
+        }
+
+        slider.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            handleMove(e.clientX);
+        });
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            handleMove(e.clientX);
+        });
+        window.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        slider.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            handleMove(e.touches[0].clientX);
+        }, { passive: true });
+        slider.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            handleMove(e.touches[0].clientX);
+        }, { passive: true });
+        slider.addEventListener('touchend', () => {
+            isDragging = false;
+        });
+
+        window.addEventListener('resize', syncBeforeImageWidth);
+
+        const comparisonMeta = {
+            car: {
+                icon: 'fa-solid fa-chair',
+                title: 'Higienização de Banco de Carro (Tecido Automotivo)',
+                text: 'Extração profunda das manchas de líquidos no assento, marcas de suor no encosto e poeira acumulada nos gomos.',
+                tags: [
+                    { color: 'amber', text: 'Mancha de Café / Refrigerante no Assento' },
+                    { color: 'stone', text: 'Suor e Gordura Corporal no Encosto' },
+                    { color: 'orange', text: 'Terra e Poeira nas Costuras' }
+                ]
+            },
+            sofa: {
+                icon: 'fa-solid fa-couch',
+                title: 'Revitalização de Sofás Retráteis e Residenciais',
+                text: 'Remoção completa de manchas de bebidas e alimentos derramados, marcas de patinhas de pet e escurecimento nos braços.',
+                tags: [
+                    { color: 'amber', text: 'Manchas de Bebidas e Alimentos' },
+                    { color: 'stone', text: 'Escurecimento de Uso nos Braços' },
+                    { color: 'orange', text: 'Marcas de Pet e Poeira Acumulada' }
+                ]
+            },
+            mattress: {
+                icon: 'fa-solid fa-bed',
+                title: 'Sanitização Profunda de Colchões Casal / Queen',
+                text: 'Clareamento de manchas amareladas de suor e umidade, eliminando ácaros, fungos e odores sem agredir a malha.',
+                tags: [
+                    { color: 'amber', text: 'Manchas Amareladas de Suor' },
+                    { color: 'stone', text: 'Bordas de Umidade / Líquidos' },
+                    { color: 'orange', text: 'Eliminação de 99,9% dos Ácaros' }
+                ]
+            }
+        };
+
+        function switchComparison(type) {
+            currentCategory = type;
+            const meta = comparisonMeta[type];
+            if (!meta) return;
+
+            renderComparisonCanvases(type);
+
+            document.getElementById('ba-desc-icon').className = meta.icon;
+            document.getElementById('ba-desc-title').textContent = meta.title;
+            document.getElementById('ba-desc-text').textContent = meta.text;
+
+            // Update dynamic stain tags
+            const tagsContainer = document.getElementById('ba-stain-tags');
+            if (tagsContainer) {
+                tagsContainer.innerHTML = `<span class="text-xs font-bold text-slate-500 uppercase mr-1">Sujeiras removidas neste exemplo:</span>` +
+                    meta.tags.map(t => `
+                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-lg bg-${t.color}-50 text-${t.color}-900 border border-${t.color}-200">
+                            <span class="w-2 h-2 rounded-full bg-${t.color}-700"></span> ${t.text}
+                        </span>
+                    `).join('');
+            }
+
+            // Update tab button styles
+            ['car', 'sofa', 'mattress'].forEach(key => {
+                const btn = document.getElementById('tab-' + key);
+                if (key === type) {
+                    btn.className = 'ba-tab-btn px-5 py-3.5 rounded-2xl font-bold text-sm transition-all flex items-center gap-2.5 bg-brand-600 text-white shadow-lg shadow-brand-600/25';
+                } else {
+                    btn.className = 'ba-tab-btn px-5 py-3.5 rounded-2xl font-bold text-sm transition-all flex items-center gap-2.5 bg-white text-slate-700 hover:bg-slate-100 border border-slate-200';
+                }
+            });
+
+            animateSliderTo(50);
+        }
+
+        // ==========================================
+        // 5. WHATSAPP QUOTE SIMULATOR LOGIC
+        // ==========================================
+        const itemLabels = {
+            'sofa_2_3': 'Sofá 2 ou 3 Lugares',
+            'sofa_retratil': 'Sofá Retrátil / Reclinável',
+            'bancos_carro': 'Bancos Automotivos (5 lugares)',
+            'interior_completo_carro': 'Higienização Interna Completa de Veículo',
+            'colchao_casal': 'Colchão (Solteiro/Casal)',
+            'poltronas_cadeiras': 'Poltronas / Cadeiras Estofadas'
+        };
+
+        let selectedItems = new Set(['sofa_retratil']);
+        let selectedCondition = 'Limpeza Profunda + Antiácaros';
+        let selectedMode = 'Atendimento a Domicílio';
+
+        function toggleSimItem(itemKey) {
+            if (selectedItems.has(itemKey)) {
+                if (selectedItems.size > 1) {
+                    selectedItems.delete(itemKey);
+                } else {
+                    showToast('Selecione pelo menos 1 item para o orçamento.');
+                    return;
+                }
+            } else {
+                selectedItems.add(itemKey);
+            }
+            renderSimItemsUI();
+            updateWhatsAppPreview();
+        }
+
+        function renderSimItemsUI() {
+            Object.keys(itemLabels).forEach(key => {
+                const btn = document.getElementById('item-' + key);
+                if (!btn) return;
+                const circle = btn.querySelector('.check-circle');
+                const icon = circle.querySelector('i');
+
+                if (selectedItems.has(key)) {
+                    btn.className = 'sim-item-btn flex items-center justify-between p-3.5 rounded-2xl border-2 border-brand-500 bg-brand-50/60 text-left transition';
+                    circle.className = 'w-6 h-6 rounded-full bg-brand-600 border-2 border-brand-600 flex items-center justify-center check-circle';
+                    icon.classList.remove('hidden');
+                } else {
+                    btn.className = 'sim-item-btn flex items-center justify-between p-3.5 rounded-2xl border-2 border-slate-200 hover:border-brand-400 text-left transition';
+                    circle.className = 'w-6 h-6 rounded-full border-2 border-slate-300 flex items-center justify-center check-circle';
+                    icon.classList.add('hidden');
+                }
+            });
+        }
+
+        function setSimCondition(condText) {
+            selectedCondition = condText;
+            const condMap = {
+                'Limpeza Profunda + Antiácaros': 'cond-1',
+                'Remoção de Manchas Difíceis': 'cond-2',
+                'Limpeza + Neutralizar Odores (Pet/Suor)': 'cond-3'
+            };
+            ['cond-1', 'cond-2', 'cond-3'].forEach(id => {
+                const btn = document.getElementById(id);
+                if (condMap[condText] === id) {
+                    btn.className = 'sim-cond-btn py-3 px-3.5 rounded-xl border-2 border-brand-500 bg-brand-50 text-brand-900 font-bold text-xs sm:text-sm transition';
+                } else {
+                    btn.className = 'sim-cond-btn py-3 px-3.5 rounded-xl border-2 border-slate-200 text-slate-700 hover:border-brand-300 font-semibold text-xs sm:text-sm transition';
+                }
+            });
+            updateWhatsAppPreview();
+        }
+
+        function setSimMode(modeText) {
+            selectedMode = modeText;
+            const domBtn = document.getElementById('mode-domicilio');
+            const locBtn = document.getElementById('mode-local');
+
+            if (modeText === 'Atendimento a Domicílio') {
+                domBtn.className = 'sim-mode-btn p-3.5 rounded-xl border-2 border-brand-500 bg-brand-50 text-brand-900 font-bold text-sm flex items-center gap-2.5 transition';
+                locBtn.className = 'sim-mode-btn p-3.5 rounded-xl border-2 border-slate-200 text-slate-700 hover:border-brand-300 font-semibold text-sm flex items-center gap-2.5 transition';
+            } else {
+                locBtn.className = 'sim-mode-btn p-3.5 rounded-xl border-2 border-brand-500 bg-brand-50 text-brand-900 font-bold text-sm flex items-center gap-2.5 transition';
+                domBtn.className = 'sim-mode-btn p-3.5 rounded-xl border-2 border-slate-200 text-slate-700 hover:border-brand-300 font-semibold text-sm flex items-center gap-2.5 transition';
+            }
+            updateWhatsAppPreview();
+        }
+
+        function buildQuoteMessage() {
+            const name = document.getElementById('cust-name').value.trim();
+            const city = document.getElementById('cust-city').value.trim() || 'Vicentina - MS';
+            const itemsList = Array.from(selectedItems).map(k => `• ${itemLabels[k]}`).join('\n');
+
+            let greeting = name ? `Olá, R.Almeida! Me chamo *${name}*.` : `Olá, R.Almeida Higienização de Sofás!`;
+
+            return `${greeting}\nGostaria de solicitar um orçamento de higienização:\n\n*Itens selecionados:*\n${itemsList}\n\n*Objetivo:* ${selectedCondition}\n*Modalidade:* ${selectedMode}\n*Localidade:* ${city}\n\nPode me passar os valores e horários disponíveis?`;
+        }
+
+        function updateWhatsAppPreview() {
+            const msg = buildQuoteMessage();
+            document.getElementById('whatsapp-preview-box').textContent = msg;
+            const encoded = encodeURIComponent(msg);
+            document.getElementById('whatsapp-send-btn').href = `https://wa.me/5567998138086?text=${encoded}`;
+        }
+
+        function quickSelectService(itemKey) {
+            selectedItems.clear();
+            selectedItems.add(itemKey);
+            renderSimItemsUI();
+            updateWhatsAppPreview();
+            const simSection = document.getElementById('simulador');
+            simSection.scrollIntoView({ behavior: 'smooth' });
+            showToast(`"${itemLabels[itemKey]}" selecionado no simulador!`);
+        }
+
+        // ==========================================
+        // 5. CLIPBOARD & TOAST HELPERS
+        // ==========================================
+        function copyTextToClipboard(text, successMsg) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                showToast(successMsg);
+            } catch (err) {
+                showToast('Não foi possível copiar automaticamente.');
+            }
+            document.body.removeChild(textarea);
+        }
+
+        function copyQuoteMessage() {
+            const msg = buildQuoteMessage();
+            copyTextToClipboard(msg, 'Mensagem do orçamento copiada! Cole no WhatsApp.');
+        }
+
+        function copyAddress() {
+            copyTextToClipboard(
+                'Rua Juvino Leme Bueno, 2284 - Vicentina, MS, 79710-000 (Plus Code: HHQG+P7 Vicentina, MS)',
+                'Endereço copiado para a área de transferência!'
+            );
+            const btnText = document.getElementById('copy-address-text');
+            const btnIcon = document.getElementById('copy-address-icon');
+            if (btnText && btnIcon) {
+                btnText.textContent = 'Endereço copiado!';
+                btnIcon.className = 'fa-solid fa-check text-emerald-400';
+                setTimeout(() => {
+                    btnText.textContent = 'Copiar Endereço';
+                    btnIcon.className = 'fa-regular fa-copy';
+                }, 3000);
+            }
+        }
+
+        // ==========================================
+        // 5B. INTERACTIVE MAP TABS & VECTOR ZOOM CONTROLS
+        // ==========================================
+        let currentMapZoom = 1;
+        let mapPanX = 0;
+        let mapPanY = 0;
+        let isPanningMap = false;
+        let panStartX = 0;
+        let panStartY = 0;
+
+        function switchMapTab(mode) {
+            const vectorPanel = document.getElementById('map-panel-vector');
+            const iframePanel = document.getElementById('map-panel-iframe');
+            const tabVector = document.getElementById('map-tab-vector');
+            const tabIframe = document.getElementById('map-tab-iframe');
+
+            if (mode === 'vector') {
+                vectorPanel.classList.remove('hidden');
+                iframePanel.classList.add('hidden');
+                tabVector.className = 'px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-brand-600 text-white shadow';
+                tabIframe.className = 'px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700';
+            } else {
+                vectorPanel.classList.add('hidden');
+                iframePanel.classList.remove('hidden');
+                tabIframe.className = 'px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-brand-600 text-white shadow';
+                tabVector.className = 'px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700';
+            }
+        }
+
+        function applyVectorMapTransform() {
+            const stage = document.getElementById('vector-map-stage');
+            if (!stage) return;
+            stage.style.transform = `scale(${currentMapZoom}) translate(${mapPanX}px, ${mapPanY}px)`;
+        }
+
+        function zoomVectorMap(delta) {
+            currentMapZoom = Math.max(1, Math.min(2.25, currentMapZoom + delta));
+            if (currentMapZoom === 1) {
+                mapPanX = 0;
+                mapPanY = 0;
+            }
+            applyVectorMapTransform();
+        }
+
+        function resetVectorMap() {
+            currentMapZoom = 1;
+            mapPanX = 0;
+            mapPanY = 0;
+            applyVectorMapTransform();
+            showToast('Mapa centralizado na R.Almeida (Nº 2284)!');
+        }
+
+        const vectorStage = document.getElementById('vector-map-stage');
+        if (vectorStage) {
+            vectorStage.addEventListener('mousedown', (e) => {
+                if (currentMapZoom <= 1) return;
+                isPanningMap = true;
+                panStartX = e.clientX - mapPanX;
+                panStartY = e.clientY - mapPanY;
+            });
+            window.addEventListener('mousemove', (e) => {
+                if (!isPanningMap) return;
+                mapPanX = Math.max(-180, Math.min(180, e.clientX - panStartX));
+                mapPanY = Math.max(-120, Math.min(120, e.clientY - panStartY));
+                applyVectorMapTransform();
+            });
+            window.addEventListener('mouseup', () => {
+                isPanningMap = false;
+            });
+        }
+
+        let toastTimeout;
+        function showToast(message) {
+            const toast = document.getElementById('custom-toast');
+            const toastMsg = document.getElementById('custom-toast-msg');
+            toastMsg.textContent = message;
+            toast.classList.remove('hidden');
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3500);
+        }
+
+        // ==========================================
+        // 6. FAQ ACCORDION
+        // ==========================================
+        function toggleFaq(index) {
+            const ans = document.getElementById('faq-ans-' + index);
+            const icon = document.getElementById('faq-icon-' + index);
+            const isHidden = ans.classList.contains('hidden');
+            if (isHidden) {
+                ans.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                ans.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Initialize on window load
+        window.onload = function () {
+            syncBeforeImageWidth();
+            renderHeroThumbnails();
+            renderComparisonCanvases('car');
+            updateWhatsAppPreview();
+        };
+    </script>
+</body>
+</html>
